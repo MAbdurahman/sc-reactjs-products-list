@@ -6,6 +6,7 @@ import App from './app/App.jsx';
 import Products from './pages/Products/index.jsx';
 import Home from './pages/Home/index.jsx';
 import About from './pages/About/index.jsx';
+import Cart from './components/Cart/index.jsx';
 import Contact from './pages/Contact/index.jsx';
 import SignIn from './auth/SignIn/index.jsx';
 import SignUp from './auth/SignUp/index.jsx';
@@ -39,6 +40,10 @@ const browserRouter = createBrowserRouter([
          {
             path: 'sign-up',
             element: <SignUp/>
+         },
+         {
+            path: 'cart',
+            element: <Cart/>
          },
          {
             path: '*',
