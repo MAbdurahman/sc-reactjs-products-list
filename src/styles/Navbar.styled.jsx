@@ -2,27 +2,109 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const LogoImage = styled.img`
-  width: 208px;
-  align-self: flex-start;
-   flex: 1;
-   @media (max-width: 900px) {
-      width: 128px;
-   }
-`;
+
 
 export const NavbarWrapper = styled.nav`
    position: relative;
    display: flex;
-   justify-content: space-between;
    align-items: center;
+   justify-content: space-between;
    padding: 1em;
    background: hsl(210, 0%, 18%);
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   @media (max-width: 748em) {
+   @media (max-width: 58em) {
       flex-direction: column;
       padding: 1rem;
       font-size: 1.5rem;
+   }
+`;
+
+export const LogoImage = styled.img`
+   max-width: 208px;
+   width: 100%;
+   min-width: 64px;
+   padding-bottom: 1em;
+   
+   @media (max-width: 58em) {
+      position: relative;
+      left: -110%;
+      width: 200px;
+   }
+`;
+
+export const LeftItems = styled.div`
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+`;
+
+export const CenterItems = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+`;
+
+export const RightItems = styled.div`
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   flex: 1;
+   
+`;
+
+export const StyledNavLinkCenter = styled(NavLink)`
+   text-decoration: none;
+   font-weight: 800;
+   color: hsl(210, 0%, 98%);
+   margin-left: 2em;
+   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+   &.${(props) => props.activeclassname} {
+      color: hsl(196, 77%, 55%);
+   }
+
+   &:hover {
+      color: hsl(196, 77%, 55%);
+   }
+
+   @media (max-width: 58em) {
+      display: none;
+   }
+`;
+
+export const StyledNavLinkRight = styled(NavLink)`
+   text-decoration: none;
+   font-weight: 800;
+   color: hsl(210, 0%, 98%);
+   margin-left: 2em;
+   padding-bottom: 0.5em;
+   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+   &:last-child {
+      background: hsl(196, 77%, 55%);
+      padding: 0.5rem 1rem;
+      border-radius: 24px;
+      &:hover {
+         color: hsl(210, 0%, 98%)
+      }
+      &.${(props) => props.activeclassname} {
+         color: hsl(210, 0%, 98%);
+      }
+   }
+
+   &.${(props) => props.activeclassname} {
+      color: hsl(196, 77%, 55%);
+   }
+
+   &:hover {
+      color: hsl(196, 77%, 55%);
+   }
+
+   @media (max-width: 58em) {
+      display: none;
    }
 `;
 
@@ -42,6 +124,8 @@ export const NavbarWrapper = styled.nav`
 
    }
 `;
+
+
 
 export const NavLinkWrapper = styled.div`
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);

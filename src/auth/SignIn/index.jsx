@@ -8,9 +8,9 @@ export default function SignIn() {
          <MetaData title="Sign In"/>
          <div className={styles.sign__in__page}>
             <h2 className={styles.sign__in__page__title}>Sign In</h2>
-            <p className={styles.sign__in__paragraph}>Do not have an account? <span
+            <h5 className={styles.sign__in__paragraph}>Do not have an account? <span
                className={styles.sign__in__paragraph__link}><Link
-               to='/sign-up'>Sign Up</Link></span></p>
+               to='/sign-up'>Sign Up</Link></span></h5>
          </div>
 
       </div>
