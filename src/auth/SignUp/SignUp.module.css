@@ -1,0 +1,31 @@
+.sign__up__page {
+   display: flex;
+   height: 100vh;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.sign__up__page__title {
+   font-weight: var(--font-weight-semibold);
+   font-size: 6rem;
+   color: var(--color-neutral-900);
+}
+
+.sign__up__paragraph {
+   text-align: center;
+   font-weight: var(--font-weight-bold);
+   color: var(--color-neutral-900);
+}
+
+.sign__up__paragraph__link a {
+   font-weight: var(--font-weight-bold);
+   color: var(--color-neutral-900);
+}
+.sign__up__paragraph__link a:hover,
+.sign__up__paragraph__link a:focus,
+.sign__up__paragraph__link a:active,
+.sign__up__paragraph__link a.active {
+   color: hsl(196, 77%, 50%);
+   cursor: pointer;
+}
