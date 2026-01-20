@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import {Squash, Squash as Hamburger} from 'hamburger-react';
 import styled from "styled-components";
 
 
@@ -25,10 +26,20 @@ export const LogoImage = styled.img`
    min-width: 64px;
    padding-bottom: 1em;
    
+   @media (max-width: 820px) {
+      position: relative;
+      left: calc(-150% + 10px);
+   }
+   
    @media (max-width: 58em) {
       position: relative;
-      left: -110%;
-      width: 200px;
+      
+   }
+   
+   @media (max-width: 540px) {
+      left: calc(-100% + 20px);
+      width: 128px;
+      padding-right: calc(3% + 4px);
    }
 `;
 
@@ -55,6 +66,27 @@ export const RightItems = styled.div`
    
 `;
 
+export const HamburgerItem = styled.div`
+   position: absolute;
+   top: calc(9dvh - 99%);
+   right: calc(8dvw + 8px);
+   display: none;
+   align-items: flex-end;
+   justify-content: center;
+   flex: 1;
+   padding-right: 1em;
+   
+   @media (max-width: 51.25em) {
+      top:  calc(10dvh - 92px);
+      display: flex;
+   }
+
+   @media (max-width: 58em) {
+      top: calc(10vh - 80px);
+      display: flex;
+   }
+`;
+
 export const StyledNavLinkCenter = styled(NavLink)`
    text-decoration: none;
    font-weight: 800;
@@ -66,7 +98,9 @@ export const StyledNavLinkCenter = styled(NavLink)`
       color: hsl(196, 77%, 55%);
    }
 
-   &:hover {
+   &:hover,
+   &:active,
+   &:focus {
       color: hsl(196, 77%, 55%);
    }
 
@@ -87,24 +121,40 @@ export const StyledNavLinkRight = styled(NavLink)`
       background: hsl(196, 77%, 55%);
       padding: 0.5rem 1rem;
       border-radius: 24px;
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
          color: hsl(210, 0%, 98%)
       }
-      &.${(props) => props.activeclassname} {
+      &.${(props) => props.activeClassname} {
          color: hsl(210, 0%, 98%);
       }
    }
 
-   &.${(props) => props.activeclassname} {
+   &.${(props) => props.activeClassname} {
       color: hsl(196, 77%, 55%);
    }
 
-   &:hover {
+   &:hover,
+   &:active,
+   &:focus {
       color: hsl(196, 77%, 55%);
    }
 
    @media (max-width: 58em) {
       display: none;
+   }
+`;
+
+export const StyledHamburger = styled(Squash)`
+     color: hsl(196, 77%, 55%);
+      font-size: large;
+      visibility: hidden;
+   @media (max-width: 51.25em) {
+      top: 30%;
+   }
+   @media (max-width: 58em) {
+      display: inline-block;
    }
 `;
 
@@ -143,7 +193,7 @@ export const StyledNavLink = styled(NavLink)`
   color: hsl(210, 0%, 98%);
   margin-left: 2rem;
   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   
+
   &:last-child {
     background: hsl(196, 77%, 55%);
     padding: 0.5rem 1rem;

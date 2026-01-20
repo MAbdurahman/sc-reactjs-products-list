@@ -7,9 +7,13 @@ import {
    StyledNavLinkCenter,
    StyledNavLinkRight,
    LeftItems,
-   RightItems
+   RightItems,
+   StyledHamburger,
+   HamburgerItem
 } from '../../styles/Navbar.styled.jsx'
 import {centerLinks, rightLinks} from '../../assets/links/links.js';
+
+import {Squash, Squash as Hamburger} from 'hamburger-react';
 
 
 export default function Navbar() {
@@ -35,9 +39,12 @@ export default function Navbar() {
                   ))
                   }
                </RightItems>
+
             </NavbarWrapper>
+            <HamburgerItem>
+               <StyledHamburger size={32} toggle={() => setIsMenuOpen(!isMenuOpen)} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
 
-
+            </HamburgerItem>
 
          </div>
       </section>
