@@ -192,5 +192,9 @@ export const GlobalStyles = createGlobalStyle`
       left: 0;
        background-color: hsl(210, 0%, 18%);
    }
+   
+   .side__panel--open {
+      transform: translate(0);
+   }
 `
 export default GlobalStyles;

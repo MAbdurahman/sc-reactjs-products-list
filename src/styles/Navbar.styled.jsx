@@ -165,9 +165,9 @@ export const StyledSidePanel = styled.div`
 
    @media (max-width: 820px) {
       position: fixed;
-      top: 99px;
-      right: -25%;
+      top: 96px;
       right: 0;
+      /*right: 0;*/
       width: 100%;
       height: calc(100dvh - 64px);
       display: flex;
@@ -176,6 +176,8 @@ export const StyledSidePanel = styled.div`
       row-gap: 1rem;
       flex: 1;
       background: hsl(210, 0%, 18%);
+      transition: transform 0.333s cubic-bezier(.17, .67, .83, .67);
+      transform: translate(100%);
       
    }
    @media (max-width: 820px) {

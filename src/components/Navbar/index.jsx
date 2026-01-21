@@ -25,6 +25,10 @@ import {Squash, Squash as Hamburger} from 'hamburger-react';
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
+   const handleMenuOpen = () => {
+      setIsMenuOpen(!isMenuOpen);
+   }
    return (
       <section className='utils-container-fluid navbar-section'>
          <div className='utils-container'>
@@ -48,10 +52,10 @@ export default function Navbar() {
 
             </NavbarWrapper>
             <HamburgerItem>
-               <StyledHamburger size={32} toggle={() => setIsMenuOpen(!isMenuOpen)} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
+               <StyledHamburger size={32} toggle={handleMenuOpen} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
 
             </HamburgerItem>
-            <StyledSidePanel>
+            <StyledSidePanel className={isMenuOpen ? 'side__panel--open': ''}>
                <MobileTopSection>
                   {mobileTopLinks.map((link) => (
                      <StyledMobileNavLinkTop key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkTop>

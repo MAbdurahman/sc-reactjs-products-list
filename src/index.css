@@ -334,3 +334,7 @@ a:hover {
     max-width: 1320px;
   }
 }
+
+.side__panel--open {
+  transform: translate(0);
+}
