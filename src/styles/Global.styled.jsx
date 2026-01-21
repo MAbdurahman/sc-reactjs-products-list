@@ -191,10 +191,15 @@ export const GlobalStyles = createGlobalStyle`
       top: 0;
       left: 0;
        background-color: hsl(210, 0%, 18%);
+      border-bottom: 3px solid hsl(196, 77%, 55%);
    }
    
    .side__panel--open {
-      transform: translate(0);
+      transform: translateX(0);
    }
-`
+   .side__panel--close {
+      transform: translateX(100%);
+   }
+   
+`;
 export default GlobalStyles;

@@ -10,6 +10,7 @@ export const NavbarWrapper = styled.nav`
    justify-content: space-between;
    padding: 1em;
    background: hsl(210, 0%, 18%);
+   
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
    @media (max-width: 820px) {
       flex-direction: column;
@@ -84,6 +85,19 @@ export const HamburgerItem = styled.div`
       top: calc(10vh - 80px);
       display: flex;
    }
+   @media (max-width: 550px) {
+      top: calc(10dvh - 64px);
+   }
+   
+   @media (max-width: 435px) {
+      top: calc(10dvh - 70px);
+   }
+   @media (max-width: 405px) {
+      top: calc(10dvh - 80px);
+   }
+   @media (max-width: 380px) {
+      top: calc(10dvh - 64px);
+   }
 `;
 
 export const StyledNavLinkCenter = styled(NavLink)`
@@ -148,6 +162,7 @@ export const StyledNavLinkRight = styled(NavLink)`
 `;
 
 export const StyledHamburger = styled(Squash)`
+   position: relative;
    z-index: 99;
    color: hsl(196, 77%, 55%);
    font-size: large;
@@ -157,6 +172,7 @@ export const StyledHamburger = styled(Squash)`
       top: 30%;
       display: inline-block;
    }
+   
 `;
 
 
@@ -165,9 +181,8 @@ export const StyledSidePanel = styled.div`
 
    @media (max-width: 820px) {
       position: fixed;
-      top: 96px;
+      top: 99px;
       right: 0;
-      /*right: 0;*/
       width: 100%;
       height: calc(100dvh - 64px);
       display: flex;
@@ -177,11 +192,15 @@ export const StyledSidePanel = styled.div`
       flex: 1;
       background: hsl(210, 0%, 18%);
       transition: transform 0.333s cubic-bezier(.17, .67, .83, .67);
-      transform: translate(100%);
+      /*transform: translate(100%);*/
       
    }
-   @media (max-width: 820px) {
+   @media (max-width: 550px) {
+      top: 67px;
 
+   }
+   @media (max-width: 395px) {
+      top: 60px;
    }
 `;
 

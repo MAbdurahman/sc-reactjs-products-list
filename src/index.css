@@ -336,5 +336,8 @@ a:hover {
 }
 
 .side__panel--open {
-  transform: translate(0);
+  transform: translateX(0);
+}
+.side__panel--close {
+  transform: translateX(100%);
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import Logo from '../Logo/index.jsx';
 import {Link} from 'react-router-dom';
 import {
@@ -25,9 +25,18 @@ import {Squash, Squash as Hamburger} from 'hamburger-react';
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+   const sidePanelRef = useRef();
 
+   const showSidePanel = () => {
+
+      setIsMenuOpen(!isMenuOpen);
+   }
    const handleMenuOpen = () => {
       setIsMenuOpen(!isMenuOpen);
+      sidePanelRef.current.classList.toggle(
+         'side__panel--open'
+      );
+      sidePanelRef.current.classList.toggle('side__panel--close')
    }
    return (
       <section className='utils-container-fluid navbar-section'>
@@ -55,7 +64,7 @@ export default function Navbar() {
                <StyledHamburger size={32} toggle={handleMenuOpen} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
 
             </HamburgerItem>
-            <StyledSidePanel className={isMenuOpen ? 'side__panel--open': ''}>
+            <StyledSidePanel ref={sidePanelRef} className={isMenuOpen ? 'side__panel--open' : 'side__panel--close'}>
                <MobileTopSection>
                   {mobileTopLinks.map((link) => (
                      <StyledMobileNavLinkTop key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkTop>
