@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {NavLink} from 'react-router-dom';
 import {Squash, Squash as Hamburger} from 'hamburger-react';
-import styled from "styled-components";
-
-
+import styled from 'styled-components';
 
 export const NavbarWrapper = styled.nav`
    position: relative;
@@ -13,7 +11,7 @@ export const NavbarWrapper = styled.nav`
    padding: 1em;
    background: hsl(210, 0%, 18%);
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   @media (max-width: 58em) {
+   @media (max-width: 820px) {
       flex-direction: column;
       padding: 1rem;
       font-size: 1.5rem;
@@ -25,17 +23,17 @@ export const LogoImage = styled.img`
    width: 100%;
    min-width: 64px;
    padding-bottom: 1em;
-   
+
    @media (max-width: 820px) {
       position: relative;
       left: calc(-150% + 10px);
    }
-   
-   @media (max-width: 58em) {
+
+   @media (max-width: 768px) {
       position: relative;
-      
+
    }
-   
+
    @media (max-width: 540px) {
       left: calc(-100% + 20px);
       width: 128px;
@@ -63,25 +61,26 @@ export const RightItems = styled.div`
    align-items: flex-end;
    justify-content: center;
    flex: 1;
-   
+
 `;
 
 export const HamburgerItem = styled.div`
    position: absolute;
    top: calc(9dvh - 99%);
    right: calc(8dvw + 8px);
+   z-index: 99;
    display: none;
    align-items: flex-end;
    justify-content: center;
    flex: 1;
    padding-right: 1em;
-   
-   @media (max-width: 51.25em) {
-      top:  calc(10dvh - 92px);
+
+   @media (max-width: 820px) {
+      top: calc(10dvh - 92px);
       display: flex;
    }
 
-   @media (max-width: 58em) {
+   @media (max-width: 768px) {
       top: calc(10vh - 80px);
       display: flex;
    }
@@ -104,7 +103,7 @@ export const StyledNavLinkCenter = styled(NavLink)`
       color: hsl(196, 77%, 55%);
    }
 
-   @media (max-width: 58em) {
+   @media (max-width: 820px) {
       display: none;
    }
 `;
@@ -121,11 +120,13 @@ export const StyledNavLinkRight = styled(NavLink)`
       background: hsl(196, 77%, 55%);
       padding: 0.5rem 1rem;
       border-radius: 24px;
+
       &:hover,
       &:active,
       &:focus {
          color: hsl(210, 0%, 98%)
       }
+
       &.${(props) => props.activeClassname} {
          color: hsl(210, 0%, 98%);
       }
@@ -141,23 +142,147 @@ export const StyledNavLinkRight = styled(NavLink)`
       color: hsl(196, 77%, 55%);
    }
 
-   @media (max-width: 58em) {
+   @media (max-width: 820px) {
       display: none;
    }
 `;
 
 export const StyledHamburger = styled(Squash)`
-     color: hsl(196, 77%, 55%);
-      font-size: large;
-      visibility: hidden;
-   @media (max-width: 51.25em) {
+   z-index: 99;
+   color: hsl(196, 77%, 55%);
+   font-size: large;
+   visibility: hidden;
+   
+   @media (max-width: 820px) {
       top: 30%;
-   }
-   @media (max-width: 58em) {
       display: inline-block;
    }
 `;
 
+
+export const StyledSidePanel = styled.div`
+      display: none;
+
+   @media (max-width: 820px) {
+      position: fixed;
+      top: 99px;
+      right: -25%;
+      right: 0;
+      width: 100%;
+      height: calc(100dvh - 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 1rem;
+      flex: 1;
+      background: hsl(210, 0%, 18%);
+      
+   }
+   @media (max-width: 820px) {
+
+   }
+`;
+
+
+export const MobileTopSection = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   row-gap: 0.25rem;
+   flex: 1;
+   gap: 0.25rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+   margin-top: -5em;
+   font-size: 2rem;
+`;
+
+export const StyledMobileNavLinkTop = styled.div`
+
+   @media (max-width: 820px) {
+      text-decoration: none;
+      font-weight: 800;
+      color: hsl(210, 0%, 98%);
+      margin-left: 2em;
+      transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+      &.${(props) => props.activeclassname} {
+         color: hsl(196, 77%, 55%);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+         color: hsl(196, 77%, 55%);
+      }
+      
+   }
+   
+`;
+
+export const StyledMobileNavLinkBottom = styled.div`
+   @media (max-width: 820px) {
+
+      text-decoration: none;
+      font-weight: 800;
+      color: hsl(210, 0%, 98%);
+      margin-left: 2em;
+      padding-bottom: 0.5em;
+      transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+      &:last-child {
+         background: hsl(196, 77%, 55%);
+         padding: 0.5rem 1rem;
+         border-radius: 24px;
+
+         &:hover,
+         &:active,
+         &:focus {
+            color: hsl(210, 0%, 98%)
+         }
+
+         &.${(props) => props.activeClassname} {
+            color: hsl(210, 0%, 98%);
+         }
+      }
+
+      &.${(props) => props.activeClassname} {
+         color: hsl(196, 77%, 55%);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+         color: hsl(196, 77%, 55%);
+      }
+      
+   }
+   
+`;
+
+export const MobileCenterSection = styled.div`
+   position: relative;
+   height: 10%;
+   width: 100%;
+   visibility: hidden;
+
+`;
+
+export const MobileBottomSection = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   row-gap: 0.25rem;
+   flex: 1;
+   gap: 0.25rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+   font-size: 2rem;
+`;
 /*
 export const NavbarWrapper = styled.nav`
    position: relative;

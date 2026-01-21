@@ -11,6 +11,8 @@ import Contact from './pages/Contact/index.jsx';
 import SignIn from './auth/SignIn/index.jsx';
 import SignUp from './auth/SignUp/index.jsx';
 import NotFound from './errors/NotFound/index.jsx';
+import EmptyCart from './errors/EmptyCart/index.jsx';
+import NoResults from './errors/NoResults/index.jsx';
 
 const browserRouter = createBrowserRouter([
    {
@@ -44,6 +46,14 @@ const browserRouter = createBrowserRouter([
          {
             path: 'cart',
             element: <Cart/>
+         },
+         {
+            path: 'empty-cart',
+            element: <EmptyCart />
+         },
+         {
+           path: 'no-results',
+           element: <NoResults />
          },
          {
             path: '*',

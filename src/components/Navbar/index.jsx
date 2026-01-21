@@ -6,12 +6,18 @@ import {
    NavbarWrapper,
    StyledNavLinkCenter,
    StyledNavLinkRight,
+   StyledMobileNavLinkTop,
+   StyledMobileNavLinkBottom,
    LeftItems,
    RightItems,
    StyledHamburger,
-   HamburgerItem
+   HamburgerItem,
+   StyledSidePanel,
+   MobileTopSection,
+   MobileCenterSection,
+   MobileBottomSection
 } from '../../styles/Navbar.styled.jsx'
-import {centerLinks, rightLinks} from '../../assets/links/links.js';
+import {centerLinks, rightLinks, mobileTopLinks, mobileBottomLinks} from '../../assets/links/links.js';
 
 import {Squash, Squash as Hamburger} from 'hamburger-react';
 
@@ -45,8 +51,26 @@ export default function Navbar() {
                <StyledHamburger size={32} toggle={() => setIsMenuOpen(!isMenuOpen)} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
 
             </HamburgerItem>
+            <StyledSidePanel>
+               <MobileTopSection>
+                  {mobileTopLinks.map((link) => (
+                     <StyledMobileNavLinkTop key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkTop>
+                  ))
+                  }
+                  <MobileCenterSection />
+                  {mobileBottomLinks.map((link) => (
+                     <StyledMobileNavLinkBottom key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkBottom>
+                  ))
+                  }
+               </MobileTopSection>
+
+               {/*<MobileBottomSection>
+
+               </MobileBottomSection>*/}
+            </StyledSidePanel>
 
          </div>
+
       </section>
 
    );
