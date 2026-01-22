@@ -210,13 +210,10 @@ export const MobileNavSection = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-items: center;
    row-gap: 0.25rem;
    flex: 1;
    gap: 0.25rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex: 1;
    margin-top: -5em;
    font-size: 2rem;
 `;
@@ -236,7 +233,8 @@ export const StyledMobileNavLinkTop = styled(NavLink)`
 
       &:hover,
       &:active,
-      &:focus {
+      &:focus.
+      &.active {
          color: hsl(196, 77%, 55%);
       }
       
@@ -261,7 +259,8 @@ export const StyledMobileNavLinkBottom = styled(NavLink)`
 
          &:hover,
          &:active,
-         &:focus {
+         &:focus,
+         &.active {
             color: hsl(210, 0%, 98%)
          }
 
@@ -276,12 +275,11 @@ export const StyledMobileNavLinkBottom = styled(NavLink)`
 
       &:hover,
       &:active,
-      &:focus {
+      &:focus,
+      &.active {
          color: hsl(196, 77%, 55%);
       }
-      
    }
-   
 `;
 
 export const MobileCenterSection = styled.div`
@@ -292,19 +290,7 @@ export const MobileCenterSection = styled.div`
 
 `;
 
-export const MobileBottomSection = styled.div`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   row-gap: 0.25rem;
-   flex: 1;
-   gap: 0.25rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex: 1;
-   font-size: 2rem;
-`;
+
 /*
 export const NavbarWrapper = styled.nav`
    position: relative;
