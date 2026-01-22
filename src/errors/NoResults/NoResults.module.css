@@ -34,7 +34,7 @@
    font-size: 1.25rem;
    font-weight: 600;
    letter-spacing: 0.05em;
-   color: white;
+   color: var(--color-neutral-000);
    transition-property: all;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    transition-duration: 200ms;

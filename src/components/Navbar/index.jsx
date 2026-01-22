@@ -13,7 +13,7 @@ import {
    StyledHamburger,
    HamburgerItem,
    StyledSidePanel,
-   MobileTopSection,
+   MobileNavSection,
    MobileCenterSection,
    MobileBottomSection
 } from '../../styles/Navbar.styled.jsx'
@@ -65,7 +65,7 @@ export default function Navbar() {
 
             </HamburgerItem>
             <StyledSidePanel ref={sidePanelRef} className={isMenuOpen ? 'side__panel--open' : 'side__panel--close'}>
-               <MobileTopSection>
+               <MobileNavSection>
                   {mobileTopLinks.map((link) => (
                      <StyledMobileNavLinkTop key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkTop>
                   ))
@@ -75,15 +75,9 @@ export default function Navbar() {
                      <StyledMobileNavLinkBottom key={link.id} to={link.path}>{link.name}</StyledMobileNavLinkBottom>
                   ))
                   }
-               </MobileTopSection>
-
-               {/*<MobileBottomSection>
-
-               </MobileBottomSection>*/}
+               </MobileNavSection>
             </StyledSidePanel>
-
          </div>
-
       </section>
 
    );

@@ -184,6 +184,7 @@ export const StyledSidePanel = styled.div`
       top: 99px;
       right: 0;
       width: 100%;
+      z-index: 90;
       height: calc(100dvh - 64px);
       display: flex;
       flex-direction: column;
@@ -205,7 +206,7 @@ export const StyledSidePanel = styled.div`
 `;
 
 
-export const MobileTopSection = styled.div`
+export const MobileNavSection = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -220,7 +221,7 @@ export const MobileTopSection = styled.div`
    font-size: 2rem;
 `;
 
-export const StyledMobileNavLinkTop = styled.div`
+export const StyledMobileNavLinkTop = styled(NavLink)`
 
    @media (max-width: 820px) {
       text-decoration: none;
@@ -243,7 +244,7 @@ export const StyledMobileNavLinkTop = styled.div`
    
 `;
 
-export const StyledMobileNavLinkBottom = styled.div`
+export const StyledMobileNavLinkBottom = styled(NavLink)`
    @media (max-width: 820px) {
 
       text-decoration: none;
