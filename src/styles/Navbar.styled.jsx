@@ -113,7 +113,8 @@ export const StyledNavLinkCenter = styled(NavLink)`
 
    &:hover,
    &:active,
-   &:focus {
+   &:focus,
+   &.active {
       color: hsl(196, 77%, 55%);
    }
 
