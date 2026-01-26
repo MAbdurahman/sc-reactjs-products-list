@@ -347,13 +347,6 @@ a:hover {
   }
 }
 
-.side__panel--open {
-  transform: translateX(0);
-}
-.side__panel--close {
-  transform: translateX(100%);
-}
-
 .hamburger--open:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }

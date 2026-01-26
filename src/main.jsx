@@ -1,6 +1,7 @@
 import React, {Fragment, StrictMode} from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './app/App.jsx';
 import Products from './pages/Products/index.jsx';
