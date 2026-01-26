@@ -1,73 +1,85 @@
 import React, {useState, useRef} from 'react';
 import Logo from '../Logo/index.jsx';
 import {
-   CenterItems,
-   NavbarWrapper,
-   StyledNavLinkCenter,
-   StyledNavLinkRight,
-   StyledMobileNavLinkTop,
-   StyledMobileNavLinkBottom,
-   LeftItems,
-   RightItems,
-   StyledHamburger,
-   HamburgerItem,
-   StyledSidePanel,
-   MobileNavSection,
-   MobileCenterSection
-} from '../../styles/Navbar.styled.jsx'
-import {centerLinks, rightLinks, mobileTopLinks, mobileBottomLinks} from '../../assets/links/links.js';
+   StyledHeader,
+   StyledHeaderNavbarContainer,
+   StyledHeaderNavbarContainerCenter, StyledHeaderNavbarContainerLeft,
+   StyledHeaderNavbarContainerRight,
+   StyledHeaderNavbarInnerContainer,
+   StyledMobileCenterSection, StyledMobileTopNavLink,
+   StyledMobileNavSection, StyledNavLinkCenter, StyledNavLinkRight,
+   StyledSidePanel, StyledMobileBottomNavLink, StyledHamburger,
+   StyledHamburgerItemContainer
+
+} from '../../styles/Navbar.styled.jsx';
+import {
+   centerLinks,
+   rightLinks,
+   mobileTopLinks,
+   mobileBottomLinks
+} from '../../assets/links/links.js';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
    const sidePanelRef = useRef(null);
 
-   const handleMenuOpen = () => {
+   const handleIsMenuOpen = () => {
       setIsMenuOpen(!isMenuOpen);
       sidePanelRef.current.classList.toggle('side__panel--open');
       sidePanelRef.current.classList.toggle('side__panel--close');
    }
 
+
+   console.log(isMenuOpen)
    return (
-      <section className='utils-container-fluid navbar-section'>
-         <div className='utils-container'>
-            <NavbarWrapper>
-               <LeftItems>
+      <StyledHeader>
+         <StyledHeaderNavbarContainer>
+            <StyledHeaderNavbarInnerContainer>
+               <StyledHeaderNavbarContainerLeft>
                   <Logo/>
-               </LeftItems>
+               </StyledHeaderNavbarContainerLeft>
+               <StyledHeaderNavbarContainerCenter>
+                  {
+                     centerLinks.map((link) => (
+                        <StyledNavLinkCenter key={link.id} to={link.path}
+                                             activeclassname='active'>{link.name}</StyledNavLinkCenter>
+                     ))
+                  }
+               </StyledHeaderNavbarContainerCenter>
+               <StyledHeaderNavbarContainerRight>
+                  {
+                     rightLinks.map((link) => (
+                        <StyledNavLinkRight key={link.id} to={link.path}
+                                            activeclassname='active'>{link.name}</StyledNavLinkRight>
+                     ))
+                  }
+               </StyledHeaderNavbarContainerRight>
+               <StyledHamburger size={40} toggle={handleIsMenuOpen}
+                                toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded/>
+               <StyledSidePanel ref={sidePanelRef}
+                                className={isMenuOpen ? 'side__panel--open' : 'side__panel--close'}>
+                  <StyledMobileNavSection>
+                     {
+                        mobileTopLinks.map((link) => (
+                           <StyledMobileTopNavLink key={link.id} to={link.path} onClick={handleIsMenuOpen}
+                                                   activeclassname='active'>{link.name}</StyledMobileTopNavLink>
+                        ))
+                     }
+                     <StyledMobileCenterSection/>
+                     {
+                        mobileBottomLinks.map((link) => (
+                           <StyledMobileBottomNavLink key={link.id} to={link.path} onClick={handleIsMenuOpen}
+                                                      activeclassname='active'>{link.name}</StyledMobileBottomNavLink>
+                        ))
+                     }
+                  </StyledMobileNavSection>
+               </StyledSidePanel>
 
-               <CenterItems>
-                  {centerLinks.map((link) => (
-                     <StyledNavLinkCenter key={link.id} to={link.path}>{link.name}</StyledNavLinkCenter>
-                  ))
-                  }
-               </CenterItems>
+            </StyledHeaderNavbarInnerContainer>
+         </StyledHeaderNavbarContainer>
+      </StyledHeader>
 
-               <RightItems>
-                  {rightLinks.map((link) => (
-                     <StyledNavLinkRight key={link.id} to={link.path}>{link.name}</StyledNavLinkRight>
-                  ))
-                  }
-               </RightItems>
-            </NavbarWrapper>
-            <HamburgerItem>
-               <StyledHamburger size={32} toggle={handleMenuOpen} toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded  />
 
-            </HamburgerItem>
-            <StyledSidePanel ref={sidePanelRef} className={isMenuOpen ? 'side__panel--open' : 'side__panel--close'}>
-               <MobileNavSection>
-                  {mobileTopLinks.map((link) => (
-                     <StyledMobileNavLinkTop key={link.id} to={link.path} onClick={handleMenuOpen} activeclassname='active'>{link.name}</StyledMobileNavLinkTop>
-                  ))
-                  }
-                  <MobileCenterSection />
-                  {mobileBottomLinks.map((link) => (
-                     <StyledMobileNavLinkBottom key={link.id} to={link.path} onClick={handleMenuOpen} activeclassname='active'>{link.name}</StyledMobileNavLinkBottom>
-                  ))
-                  }
-               </MobileNavSection>
-            </StyledSidePanel>
-         </div>
-      </section>
    );
 }

@@ -3,31 +3,119 @@ import {NavLink} from 'react-router-dom';
 import {Squash, Squash as Hamburger} from 'hamburger-react';
 import styled from 'styled-components';
 
-export const NavbarWrapper = styled.nav`
+
+export const StyledHeader = styled.header`
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 80px;
+   width: 100%;
+   background-color: var(--color-neutral-800);
+
+`;
+
+export const StyledHeaderNavbarContainer = styled.div`
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-right: 16px;
+   padding-left: 16px;
+
+   @media screen and (min-width: 576px) {
+      max-width: 544px;
+   }
+   @media screen and (min-width: 768px) {
+      max-width: 720px;
+   }
+   @media screen and (min-width: 992px) {
+      max-width: 960px;
+   }
+   @media screen and (min-width: 1200px) {
+      max-width: 1144px;
+   }
+   @media screen and (min-width: 1400px) {
+      max-width: 1320px;
+   }
+
+`;
+
+export const StyledHeaderNavbarInnerContainer = styled.div`
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 0.5em;
+
+`;
+
+export const StyledHeaderNavbarContainerLeft = styled.div`
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+   
+   @media only screen and (max-width: 820px) {
+      justify-content: flex-start;
+   }
+
+`;
+
+export const StyledHeaderNavbarContainerCenter = styled.div`
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+
+   @media only screen and (max-width: 820px) {
+      display: none;
+   }
+`;
+
+export const StyledHeaderNavbarContainerRight = styled.div`
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+
+   @media only screen and (max-width: 820px) {
+      display: none;
+   }
+   
+`;
+
+/*export const NavbarWrapper = styled.nav`
    position: relative;
    display: flex;
    align-items: center;
    justify-content: space-between;
    padding: 1em;
    background: hsl(210, 0%, 18%);
-   
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+   
    @media (max-width: 820px) {
       flex-direction: column;
       padding: 1rem;
       font-size: 1.5rem;
    }
-`;
+`;*/
 
 export const LogoImage = styled.img`
    max-width: 208px;
    width: 100%;
+   z-index: 20;
    min-width: 64px;
    padding-bottom: 1em;
+   
 
    @media (max-width: 820px) {
       position: relative;
-      left: calc(-150% + 10px);
+      /*left: calc(-150% + 10px);*/
    }
 
    @media (max-width: 768px) {
@@ -36,13 +124,13 @@ export const LogoImage = styled.img`
    }
 
    @media (max-width: 540px) {
-      left: calc(-100% + 20px);
+      /*left: calc(-100% + 20px);
       width: 128px;
-      padding-right: calc(3% + 4px);
+      padding-right: calc(3% + 4px);*/
    }
 `;
 
-export const LeftItems = styled.div`
+/*export const StyledLeftItems = styled.div`
    position: relative;
    display: flex;
    align-items: center;
@@ -50,55 +138,30 @@ export const LeftItems = styled.div`
    flex: 1;
 `;
 
-export const CenterItems = styled.div`
+export const StyledCenterItems = styled.div`
+   position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
    flex: 1;
+   
+   @media (max-width: 820px) {
+      display: none;
+   }
 `;
 
-export const RightItems = styled.div`
+export const StyledRightItems = styled.div`
    display: flex;
    align-items: flex-end;
    justify-content: center;
    flex: 1;
 
-`;
-
-export const HamburgerItem = styled.div`
-   position: absolute;
-   top: calc(9dvh - 99%);
-   right: calc(8dvw + 8px);
-   z-index: 99;
-   display: none;
-   align-items: flex-end;
-   justify-content: center;
-   flex: 1;
-   padding-right: 1em;
-
    @media (max-width: 820px) {
-      top: calc(10dvh - 92px);
-      display: flex;
-   }
+      display: none;
 
-   @media (max-width: 768px) {
-      top: calc(10vh - 80px);
-      display: flex;
-   }
-   @media (max-width: 550px) {
-      top: calc(10dvh - 64px);
-   }
-   
-   @media (max-width: 435px) {
-      top: calc(10dvh - 70px);
-   }
-   @media (max-width: 405px) {
-      top: calc(10dvh - 80px);
-   }
-   @media (max-width: 380px) {
-      top: calc(10dvh - 64px);
-   }
-`;
+`;*/
+
+;
 
 export const StyledNavLinkCenter = styled(NavLink)`
    text-decoration: none;
@@ -118,9 +181,9 @@ export const StyledNavLinkCenter = styled(NavLink)`
       color: hsl(196, 77%, 55%);
    }
 
-   @media (max-width: 820px) {
+   /*@media (max-width: 840px) {
       display: none;
-   }
+   */}
 `;
 
 export const StyledNavLinkRight = styled(NavLink)`
@@ -138,7 +201,8 @@ export const StyledNavLinkRight = styled(NavLink)`
 
       &:hover,
       &:active,
-      &:focus {
+      &:focus,
+      .active {
          color: hsl(210, 0%, 98%)
       }
 
@@ -153,7 +217,8 @@ export const StyledNavLinkRight = styled(NavLink)`
 
    &:hover,
    &:active,
-   &:focus {
+   &:focus, 
+   .active {
       color: hsl(196, 77%, 55%);
    }
 
@@ -162,20 +227,55 @@ export const StyledNavLinkRight = styled(NavLink)`
    }
 `;
 
+
+export const StyledHamburgerItemContainer = styled.div`
+ /*  position: absolute;
+   top: calc(9dvh - 99%);
+   right: calc(8dvw + 8px);*/
+   z-index: 99;
+   display: none;
+   align-items: flex-end;
+   justify-content: center;
+   flex: 1;
+   padding-right: 1em;
+
+   @media (max-width: 820px) {
+      /*top: calc(10dvh - 92px);*/
+      display: flex;
+   }
+
+   @media (max-width: 768px) {
+      /*top: calc(10vh - 80px);*/
+      display: flex;
+   }
+   @media (max-width: 550px) {
+      top: calc(10dvh - 64px);
+   }
+   
+   @media (max-width: 435px) {
+      top: calc(10dvh - 70px);
+   }
+   @media (max-width: 405px) {
+      top: calc(10dvh - 80px);
+   }
+   @media (max-width: 380px) {
+      top: calc(10dvh - 64px);
+   }
+`
+
 export const StyledHamburger = styled(Squash)`
    position: relative;
    z-index: 99;
    color: hsl(196, 77%, 55%);
    font-size: large;
-   visibility: hidden;
+   display: none;
    
    @media (max-width: 820px) {
-      top: 30%;
-      display: inline-block;
+      /*top: 30%;*/
+      display: block;
    }
    
 `;
-
 
 export const StyledSidePanel = styled.div`
       display: none;
@@ -193,6 +293,7 @@ export const StyledSidePanel = styled.div`
       row-gap: 1rem;
       flex: 1;
       background: hsl(210, 0%, 18%);
+      background: var(--color-neutral-800);
       transition: transform 0.333s cubic-bezier(.17, .67, .83, .67);
       /*transform: translate(100%);*/
       
@@ -207,7 +308,8 @@ export const StyledSidePanel = styled.div`
 `;
 
 
-export const MobileNavSection = styled.div`
+export const StyledMobileNavSection = styled.div`
+   width: 80%;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -216,16 +318,19 @@ export const MobileNavSection = styled.div`
    flex: 1;
    gap: 0.25rem;
    margin-top: -5em;
+   margin-left: auto;
+   margin-right: auto;
    font-size: 2rem;
 `;
 
-export const StyledMobileNavLinkTop = styled(NavLink)`
+export const StyledMobileTopNavLink = styled(NavLink)`
 
    @media (max-width: 820px) {
       text-decoration: none;
       font-weight: 800;
       color: hsl(210, 0%, 98%);
-      margin-left: 2em;
+      margin-left: auto;
+      margin-right: auto;
       transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
 
       &.${(props) => props.activeclassname} {
@@ -243,13 +348,22 @@ export const StyledMobileNavLinkTop = styled(NavLink)`
    
 `;
 
-export const StyledMobileNavLinkBottom = styled(NavLink)`
+export const StyledMobileCenterSection = styled.div`
+   position: relative;
+   height: 10%;
+   width: 100%;
+   visibility: hidden;
+
+`;
+
+export const StyledMobileBottomNavLink = styled(NavLink)`
    @media (max-width: 820px) {
 
       text-decoration: none;
       font-weight: 800;
       color: hsl(210, 0%, 98%);
-      margin-left: 2em;
+      margin-left: auto;
+      margin-right: auto;
       padding-bottom: 0.5em;
       transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
 
@@ -283,13 +397,7 @@ export const StyledMobileNavLinkBottom = styled(NavLink)`
    }
 `;
 
-export const MobileCenterSection = styled.div`
-   position: relative;
-   height: 10%;
-   width: 100%;
-   visibility: hidden;
 
-`;
 
 
 /*

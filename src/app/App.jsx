@@ -6,9 +6,9 @@ export default function App() {
 
    return (
       <div>
+         <GlobalStyles/>
          <Navbar/>
          <Outlet/>
-         <GlobalStyles/>
       </div>
 
    );

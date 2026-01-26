@@ -23,6 +23,18 @@
 :root {
   --font-body: 'Mulish', sans-serif;
 
+  /************************* fluid body text *************************/
+  --fluid-body-text-p000: clamp(0.51rem, 0.13vi + 0.49rem, 0.64rem);
+  --fluid-body-text-p100: clamp(0.64rem, 0.16vi + 0.61rem, 0.8rem);
+  --fluid-body-text-p200: clamp(0.8rem, 0.2vi + 0.76rem, 1rem);
+  --fluid-body-text-p300: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
+  --fluid-body-text-p400: clamp(1.25rem, 0.31vi + 1.19rem, 1.56rem);
+  --fluid-body-text-p500: clamp(1.56rem, 0.39vi + 1.48rem, 1.95rem);
+  --fluid-body-text-p600: clamp(1.95rem, 0.49vi + 1.86rem, 2.44rem);
+  --fluid-body-text-p700: clamp(2.44rem, 0.61vi + 2.32rem, 3.05rem);
+  --fluid-body-text-p800: clamp(3.05rem, 0.76vi + 2.9rem, 3.81rem);
+  --fluid-body-text-p900: clamp(3.81rem, 0.95vi + 3.62rem, 4.77rem);
+
   /************************* typography scale *************************/
   --font-size-heading-01: 3.815rem;
   --font-size-heading-02: 3.052rem;
@@ -165,7 +177,7 @@ html {
 }
 @media screen and (max-width: 390px) {
   html {
-    font-size: 50%;
+    font-size: 62.5%;
   }
 
 }
@@ -333,6 +345,33 @@ a:hover {
   .utils-container {
     max-width: 1320px;
   }
+}
+
+.side__panel--open {
+  transform: translateX(0);
+}
+.side__panel--close {
+  transform: translateX(100%);
+}
+
+.hamburger--open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.hamburger--open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu--open {
+  transform: translateX(0);
+}
+.menu--close {
+  transform: translateX(100%);
 }
 
 .side__panel--open {
