@@ -10,7 +10,6 @@ import {
    StyledMobileNavSection, StyledNavLinkCenter, StyledNavLinkRight,
    StyledSidePanel, StyledMobileBottomNavLink, StyledHamburger,
    StyledHamburgerItemContainer
-
 } from '../../styles/Navbar.styled.jsx';
 import {
    centerLinks,
@@ -30,8 +29,6 @@ export default function Navbar() {
       sidePanelRef.current.classList.toggle('side__panel--close');
    }
 
-
-   console.log(isMenuOpen)
    return (
       <StyledHeader>
          <StyledHeaderNavbarContainer>
@@ -55,8 +52,10 @@ export default function Navbar() {
                      ))
                   }
                </StyledHeaderNavbarContainerRight>
-               <StyledHamburger size={40} toggle={handleIsMenuOpen}
-                                toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded/>
+               <StyledHamburgerItemContainer>
+                  <StyledHamburger size={40} toggle={handleIsMenuOpen}
+                                   toggled={isMenuOpen} color='hsl(196, 77%, 55%)' rounded/>
+               </StyledHamburgerItemContainer>
                <StyledSidePanel ref={sidePanelRef}
                                 className={isMenuOpen ? 'side__panel--open' : 'side__panel--close'}>
                   <StyledMobileNavSection>
@@ -75,7 +74,6 @@ export default function Navbar() {
                      }
                   </StyledMobileNavSection>
                </StyledSidePanel>
-
             </StyledHeaderNavbarInnerContainer>
          </StyledHeaderNavbarContainer>
       </StyledHeader>

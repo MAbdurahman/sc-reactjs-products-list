@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {NavLink} from 'react-router-dom';
-import {Squash, Squash as Hamburger} from 'hamburger-react';
+import {Squash} from 'hamburger-react';
 import styled from 'styled-components';
 
 
@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
    min-height: 80px;
    width: 100%;
    background-color: var(--color-neutral-800);
+   border-bottom: 3px solid var(--color-bright-blue-01-700);
 
 `;
 
@@ -234,44 +235,47 @@ export const StyledHamburgerItemContainer = styled.div`
    right: calc(8dvw + 8px);*/
    z-index: 99;
    display: none;
-   align-items: flex-end;
-   justify-content: center;
-   flex: 1;
-   padding-right: 1em;
+   /*align-items: flex-end;
+   justify-content: center;*/
+   /*flex: 1*/;
+   /*padding-right: 1em;*/
 
    @media (max-width: 820px) {
       /*top: calc(10dvh - 92px);*/
       display: flex;
+      justify-content: flex-end;
+      width: 48px;
+      max-width: 48px;
    }
 
    @media (max-width: 768px) {
       /*top: calc(10vh - 80px);*/
-      display: flex;
+      /*display: flex;*/
    }
    @media (max-width: 550px) {
-      top: calc(10dvh - 64px);
+      /*top: calc(10dvh - 64px);*/
    }
    
    @media (max-width: 435px) {
-      top: calc(10dvh - 70px);
+      /*top: calc(10dvh - 70px);*/
    }
    @media (max-width: 405px) {
-      top: calc(10dvh - 80px);
+      /*top: calc(10dvh - 80px)*/;
    }
    @media (max-width: 380px) {
-      top: calc(10dvh - 64px);
+      /*top: calc(10dvh - 64px);*/
    }
 `
 
 export const StyledHamburger = styled(Squash)`
-   position: relative;
-   z-index: 99;
-   color: hsl(196, 77%, 55%);
-   font-size: large;
    display: none;
    
    @media (max-width: 820px) {
       /*top: 30%;*/
+      position: relative;
+      z-index: 99;
+      color: hsl(196, 77%, 55%);
+      font-size: large;
       display: block;
    }
    
@@ -282,7 +286,7 @@ export const StyledSidePanel = styled.div`
 
    @media (max-width: 820px) {
       position: fixed;
-      top: 99px;
+      top: 80px;
       right: 0;
       width: 100%;
       z-index: 90;
@@ -295,7 +299,7 @@ export const StyledSidePanel = styled.div`
       background: hsl(210, 0%, 18%);
       background: var(--color-neutral-800);
       transition: transform 0.333s cubic-bezier(.17, .67, .83, .67);
-      /*transform: translate(100%);*/
+      
       
    }
    @media (max-width: 550px) {
