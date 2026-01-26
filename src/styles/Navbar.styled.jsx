@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
    position: fixed;
    top: 0;
    left: 0;
+   z-index: 100;
    min-height: 80px;
    width: 100%;
    background-color: var(--color-neutral-800);
@@ -58,7 +59,7 @@ export const StyledHeaderNavbarContainerLeft = styled.div`
    align-items: center;
    justify-content: center;
    flex: 1;
-   
+
    @media only screen and (max-width: 820px) {
       justify-content: flex-start;
    }
@@ -87,7 +88,7 @@ export const StyledHeaderNavbarContainerRight = styled.div`
    @media only screen and (max-width: 820px) {
       display: none;
    }
-   
+
 `;
 
 /*export const NavbarWrapper = styled.nav`
@@ -112,7 +113,7 @@ export const LogoImage = styled.img`
    z-index: 20;
    min-width: 64px;
    padding-bottom: 1em;
-   
+
 
    @media (max-width: 820px) {
       position: relative;
@@ -131,36 +132,40 @@ export const LogoImage = styled.img`
    }
 `;
 
-/*export const StyledLeftItems = styled.div`
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex: 1;
-`;
 
-export const StyledCenterItems = styled.div`
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex: 1;
-   
-   @media (max-width: 820px) {
-      display: none;
-   }
-`;
+export const StyledLogoLink = styled(NavLink)`
+        text-decoration: none;
+   `;
+   /*export const StyledLeftItems = styled.div`
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+   `;
 
-export const StyledRightItems = styled.div`
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
-   flex: 1;
+   export const StyledCenterItems = styled.div`
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
 
-   @media (max-width: 820px) {
-      display: none;
+      @media (max-width: 820px) {
+         display: none;
+      }
+   `;
 
-`;*/
+   export const StyledRightItems = styled.div`
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex: 1;
+
+      @media (max-width: 820px) {
+         display: none;
+
+   `;*/
 
 ;
 
@@ -184,7 +189,8 @@ export const StyledNavLinkCenter = styled(NavLink)`
 
    /*@media (max-width: 840px) {
       display: none;
-   */}
+   */
+}
 `;
 
 export const StyledNavLinkRight = styled(NavLink)`
@@ -218,7 +224,7 @@ export const StyledNavLinkRight = styled(NavLink)`
 
    &:hover,
    &:active,
-   &:focus, 
+   &:focus,
    .active {
       color: hsl(196, 77%, 55%);
    }
@@ -230,9 +236,9 @@ export const StyledNavLinkRight = styled(NavLink)`
 
 
 export const StyledHamburgerItemContainer = styled.div`
- /*  position: absolute;
-   top: calc(9dvh - 99%);
-   right: calc(8dvw + 8px);*/
+   /*  position: absolute;
+     top: calc(9dvh - 99%);
+     right: calc(8dvw + 8px);*/
    z-index: 99;
    display: none;
    /*align-items: flex-end;
@@ -255,12 +261,13 @@ export const StyledHamburgerItemContainer = styled.div`
    @media (max-width: 550px) {
       /*top: calc(10dvh - 64px);*/
    }
-   
+
    @media (max-width: 435px) {
       /*top: calc(10dvh - 70px);*/
    }
    @media (max-width: 405px) {
-      /*top: calc(10dvh - 80px)*/;
+      /*top: calc(10dvh - 80px)*/
+   ;
    }
    @media (max-width: 380px) {
       /*top: calc(10dvh - 64px);*/
@@ -269,7 +276,7 @@ export const StyledHamburgerItemContainer = styled.div`
 
 export const StyledHamburger = styled(Squash)`
    display: none;
-   
+
    @media (max-width: 820px) {
       /*top: 30%;*/
       position: relative;
@@ -278,11 +285,11 @@ export const StyledHamburger = styled(Squash)`
       font-size: large;
       display: block;
    }
-   
+
 `;
 
 export const StyledSidePanel = styled.div`
-      display: none;
+   display: none;
 
    @media (max-width: 820px) {
       position: fixed;
@@ -299,15 +306,15 @@ export const StyledSidePanel = styled.div`
       background: hsl(210, 0%, 18%);
       background: var(--color-neutral-800);
       transition: transform 0.333s cubic-bezier(.17, .67, .83, .67);
-      
-      
+
+
    }
    @media (max-width: 550px) {
-      top: 67px;
+      top: 80px;
 
    }
    @media (max-width: 395px) {
-      top: 60px;
+      top: 80px;
    }
 `;
 
@@ -347,9 +354,9 @@ export const StyledMobileTopNavLink = styled(NavLink)`
       &.active {
          color: hsl(196, 77%, 55%);
       }
-      
+
    }
-   
+
 `;
 
 export const StyledMobileCenterSection = styled.div`
@@ -400,8 +407,6 @@ export const StyledMobileBottomNavLink = styled(NavLink)`
       }
    }
 `;
-
-
 
 
 /*

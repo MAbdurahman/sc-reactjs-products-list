@@ -9,7 +9,7 @@ import {
    StyledMobileCenterSection, StyledMobileTopNavLink,
    StyledMobileNavSection, StyledNavLinkCenter, StyledNavLinkRight,
    StyledSidePanel, StyledMobileBottomNavLink, StyledHamburger,
-   StyledHamburgerItemContainer
+   StyledHamburgerItemContainer, StyledLogoLink
 } from '../../styles/Navbar.styled.jsx';
 import {
    centerLinks,
@@ -25,8 +25,8 @@ export default function Navbar() {
 
    const handleIsMenuOpen = () => {
       setIsMenuOpen(!isMenuOpen);
-      sidePanelRef.current.classList.toggle('side__panel--open');
-      sidePanelRef.current.classList.toggle('side__panel--close');
+      `${isMenuOpen}` ? sidePanelRef.current.classList.toggle('side__panel--open') :
+         sidePanelRef.current.classList.toggle('side__panel--close');
    }
 
    return (
@@ -34,7 +34,9 @@ export default function Navbar() {
          <StyledHeaderNavbarContainer>
             <StyledHeaderNavbarInnerContainer>
                <StyledHeaderNavbarContainerLeft>
-                  <Logo/>
+                  <StyledLogoLink to='/'>
+                     <Logo/>
+                  </StyledLogoLink>
                </StyledHeaderNavbarContainerLeft>
                <StyledHeaderNavbarContainerCenter>
                   {
@@ -77,7 +79,6 @@ export default function Navbar() {
             </StyledHeaderNavbarInnerContainer>
          </StyledHeaderNavbarContainer>
       </StyledHeader>
-
 
    );
 }
