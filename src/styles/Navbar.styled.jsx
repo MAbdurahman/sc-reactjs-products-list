@@ -91,22 +91,6 @@ export const StyledHeaderNavbarContainerRight = styled.div`
 
 `;
 
-/*export const NavbarWrapper = styled.nav`
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 1em;
-   background: hsl(210, 0%, 18%);
-   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   
-   @media (max-width: 820px) {
-      flex-direction: column;
-      padding: 1rem;
-      font-size: 1.5rem;
-   }
-`;*/
-
 export const LogoImage = styled.img`
    max-width: 208px;
    width: 100%;
@@ -117,7 +101,7 @@ export const LogoImage = styled.img`
 
    @media (max-width: 820px) {
       position: relative;
-      /*left: calc(-150% + 10px);*/
+      
    }
 
    @media (max-width: 768px) {
@@ -126,48 +110,13 @@ export const LogoImage = styled.img`
    }
 
    @media (max-width: 540px) {
-      /*left: calc(-100% + 20px);
-      width: 128px;
-      padding-right: calc(3% + 4px);*/
+      
    }
 `;
-
 
 export const StyledLogoLink = styled(NavLink)`
         text-decoration: none;
    `;
-   /*export const StyledLeftItems = styled.div`
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-   `;
-
-   export const StyledCenterItems = styled.div`
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-
-      @media (max-width: 820px) {
-         display: none;
-      }
-   `;
-
-   export const StyledRightItems = styled.div`
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      flex: 1;
-
-      @media (max-width: 820px) {
-         display: none;
-
-   `;*/
-
-;
 
 export const StyledNavLinkCenter = styled(NavLink)`
    text-decoration: none;
@@ -187,9 +136,8 @@ export const StyledNavLinkCenter = styled(NavLink)`
       color: hsl(196, 77%, 55%);
    }
 
-   /*@media (max-width: 840px) {
+   @media (max-width: 820px) {
       display: none;
-   */
 }
 `;
 
@@ -236,18 +184,10 @@ export const StyledNavLinkRight = styled(NavLink)`
 
 
 export const StyledHamburgerItemContainer = styled.div`
-   /*  position: absolute;
-     top: calc(9dvh - 99%);
-     right: calc(8dvw + 8px);*/
    z-index: 99;
    display: none;
-   /*align-items: flex-end;
-   justify-content: center;*/
-   /*flex: 1*/;
-   /*padding-right: 1em;*/
-
+   
    @media (max-width: 820px) {
-      /*top: calc(10dvh - 92px);*/
       display: flex;
       justify-content: flex-end;
       width: 48px;
@@ -255,22 +195,21 @@ export const StyledHamburgerItemContainer = styled.div`
    }
 
    @media (max-width: 768px) {
-      /*top: calc(10vh - 80px);*/
-      /*display: flex;*/
+      
    }
    @media (max-width: 550px) {
-      /*top: calc(10dvh - 64px);*/
+      
    }
 
    @media (max-width: 435px) {
-      /*top: calc(10dvh - 70px);*/
+      
    }
    @media (max-width: 405px) {
-      /*top: calc(10dvh - 80px)*/
+      
    ;
    }
    @media (max-width: 380px) {
-      /*top: calc(10dvh - 64px);*/
+      
    }
 `
 
@@ -278,7 +217,6 @@ export const StyledHamburger = styled(Squash)`
    display: none;
 
    @media (max-width: 820px) {
-      /*top: 30%;*/
       position: relative;
       z-index: 99;
       color: hsl(196, 77%, 55%);
@@ -407,79 +345,3 @@ export const StyledMobileBottomNavLink = styled(NavLink)`
       }
    }
 `;
-
-
-/*
-export const NavbarWrapper = styled.nav`
-   position: relative;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background: hsl(210, 0%, 18%);
-   padding: 1em;
-   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   @media (max-width: 704px) {
-      flex-direction: column;
-      padding: 1rem;
-      font-size: 1.5rem;
-
-   }
-`;
-
-
-
-export const NavLinkWrapper = styled.div`
-   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-  @media (max-width: 704px) {
-    display: ${(props) => (!props.active ? 'none' : 'block')};
-    text-align: center;
-    padding: 2rem 0;
-     transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-  }
-`;
-
-export const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
-   font-weight: 800;
-  color: hsl(210, 0%, 98%);
-  margin-left: 2rem;
-  transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
-
-  &:last-child {
-    background: hsl(196, 77%, 55%);
-    padding: 0.5rem 1rem;
-    border-radius: 24px;
-    &:hover {
-      color: hsl(210, 0%, 98%)
-    }
-    &.${(props) => props.activeclassname} {
-      color: hsl(210, 0%, 98%);
-    }
-  }
-
-  &.${(props) => props.activeclassname} {
-    color: hsl(196, 77%, 55%);
-  }
-
-  &:hover {
-    color: hsl(196, 77%, 55%);
-  }
-
-  @media (max-width: 704px) {
-    display: block;
-    margin: 2rem auto;
-  }
-`;
-
-export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 21px;
-  color: hsl(210, 0%, 98%);;
-  font-size: 2rem;
-  cursor: pointer;
-  @media (max-width: 704px){
-    display: block;
-  }
-`;*/
