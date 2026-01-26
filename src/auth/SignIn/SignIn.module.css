@@ -22,14 +22,16 @@
    font-weight: var(--font-weight-bold);
    color: var(--color-neutral-900);
 }
+/*
 .sign__in__paragraph__link a:hover,
 .sign__in__paragraph__link a:focus,
 .sign__in__paragraph__link a:active,
 .sign__in__paragraph__link a.active {
-   /*color: hsl(196, 77%, 50%);*/
+   !*color: hsl(196, 77%, 50%);*!
    color: var(--color-bright-blue-01-700);
    cursor: pointer;
 }
+*/
 
 
 
@@ -177,4 +179,31 @@
 .hide__label {
    /*visibility: hidden;*/
    /*display: none;*/
+}
+
+@media screen and (max-width: 540px) {
+   .sign__in {
+      width: 320px !important;
+      min-width: 320px !important;
+      max-width: 320px !important;
+   }
+   input[type="password"] {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+
+   .sign__in__form__passwordGroup {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 28px;
+   }
+
+}
+
+@media screen and (max-width: 325px) {
+   .sign__in {
+      width: 280px !important;
+      min-width: 280px !important;
+      max-width: 280px !important;
+   }
 }
