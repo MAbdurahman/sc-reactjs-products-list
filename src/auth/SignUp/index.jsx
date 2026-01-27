@@ -1,24 +1,20 @@
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './SignUp.module.css';
-import {Link} from 'react-router-dom';
-
 import {useReducer, useState} from 'react';
-
 import {Col, Container, Row} from 'react-bootstrap';
 import {EyeInvisibleOutlined, EyeOutlined} from '@ant-design/icons';
 import {validateUserInfo, getFirstName} from '../../assets/utils/functionsUtils';
 import PasswordStrengthMeter from '../../Components/PasswordStrengthMeter/index.jsx';
-
-
 import {ACTIONS, initialState, signUpReducer} from './signUpReducer.js';
-import {useNavigate} from 'react-router-dom';
-
+import {useNavigate, Link} from 'react-router-dom';
+import useNotification from '../../assets/hooks/useNotification.jsx';
 
 
 export default function SignUp() {
    const [isShowing, setIsShowing] = useState(false);
    const [state, dispatch] = useReducer(signUpReducer, initialState);
    const navigate = useNavigate();
+   const {updateNotification} = useNotification();
 
    const togglePasswordIsShowing = () => {
       setIsShowing(!isShowing);
@@ -30,20 +26,18 @@ export default function SignUp() {
       const {isValid, error} = validateUserInfo(state.username.value, state.fullname.value, state.email.value, state.password.value);
       try {
          if (!isValid) {
-            /*toast.error(error);
-            return;*/
+            return updateNotification("error", error);
          }
          const firstName = getFirstName(state.fullname.value);
-         /*toast.success(`${firstName} successfully signed up!`);*/
+         updateNotification('success', `${firstName} successfully signed up!`);
 
          setTimeout(()=> {
             dispatch({type: ACTIONS.RESET_FORM});
             navigate('/sign-in');
          }, 3000);
 
-
       } catch (err) {
-         /*toast.error(err.message);*/
+         return updateNotification("error", err.message);
       }
    };
 
@@ -57,10 +51,10 @@ export default function SignUp() {
                   <section className={styles.sign__up}>
                      <h4 className={styles.sign__up__title}>Sign Up</h4>
                      <form action='' className={styles.sign__up__form} onSubmit={handleSubmit}>
-                        <div className={styles.sign__up__form__group} tabIndex={0} >
+                        {/*<div className={styles.sign__up__form__group} tabIndex={0} >
                            <label className={styles.hide__label} htmlFor='username'>Username</label>
                            <input type='text' id='username' name='username' placeholder='Enter username' onChange={(e) => dispatch({ type: ACTIONS.USERNAME_CHANGE, payload: e.target.value })}/>
-                        </div>
+                        </div>*/}
                         <div className={styles.sign__up__form__group} tabIndex={1}>
                            <label className={styles.hide__label} htmlFor='fullname'>Full name</label>
                            <input type='text' id='fullname' name='fullname' placeholder='Enter first and last name' onChange={(e) => dispatch({ type: ACTIONS.FULLNAME_CHANGE, payload: e.target.value })}/>

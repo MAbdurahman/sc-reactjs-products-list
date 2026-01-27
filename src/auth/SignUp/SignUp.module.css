@@ -38,8 +38,9 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   min-width: 320px;
-   width: 512px;
+   min-width: 440px;
+   max-width: 440px;
+   width: 440px;
    height: fit-content;
    display: flex;
    flex-direction: column;
@@ -82,14 +83,14 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   gap: 0.75em;
+   gap: 0.5em;
    padding: 2em;
 }
 
 .sign__up__form__group {
    display: flex;
    flex-direction: column;
-   gap: 0.20em;
+   /*gap: 0.20em;*/
    font-size: 1.025rem;
 }
 
@@ -178,11 +179,11 @@
 .sign__up__form__text__link a:focus,
 .sign__up__form__text__link a:active,
 .sign__up__form__text__link a.active {
-   color: dodgerblue !important;
+   color: hsl(196, 77%, 55%) !important;
    cursor: pointer;
 }
 
 .hide__label {
-   /*visibility: hidden;*/
+   visibility: hidden;
 
 }
