@@ -3,7 +3,7 @@ import styles from './SignUp.module.css';
 import {useReducer, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import {EyeInvisibleOutlined, EyeOutlined} from '@ant-design/icons';
-import {validateUserInfo, getFirstName} from '../../assets/utils/functionsUtils';
+import {getFirstName, validatedNameEmailAndPassword} from '../../assets/utils/functionsUtils';
 import PasswordStrengthMeter from '../../Components/PasswordStrengthMeter/index.jsx';
 import {ACTIONS, initialState, signUpReducer} from './signUpReducer.js';
 import {useNavigate, Link} from 'react-router-dom';
@@ -23,7 +23,7 @@ export default function SignUp() {
    const handleSubmit = (e) => {
       e.preventDefault();
 
-      const {isValid, error} = validateUserInfo(state.username.value, state.fullname.value, state.email.value, state.password.value);
+      const {isValid, error} = validatedNameEmailAndPassword(state.fullname.value, state.email.value, state.password.value);
       try {
          if (!isValid) {
             return updateNotification("error", error);
