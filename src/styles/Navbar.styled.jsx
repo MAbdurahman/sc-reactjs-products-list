@@ -345,3 +345,31 @@ export const StyledMobileBottomNavLink = styled(NavLink)`
       }
    }
 `;
+
+export const StyledCartIconContainer = styled.div`
+position: relative;
+   font-size: 1.5rem;
+`;
+
+export const StyledCartIcon = styled.img`
+   position: relative;
+   width: 24px;
+   height: 24px;
+   top: 0.25rem;
+`;
+
+export const StyledCartCircle = styled.div`
+  position: absolute;
+   bottom: 39px;
+   left: 16px;
+   height: 24px;
+   width: 24px;
+   border-radius: 50%;
+   background-color: var(--color-bright-blue-01-500);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: hsl(210, 0%, 98%);
+   font-weight: 800;
+   
+`;

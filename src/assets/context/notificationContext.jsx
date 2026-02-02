@@ -53,9 +53,9 @@ export default function NotificationProvider({children}) {
    return (
       <NotificationContext.Provider value={{updateNotification}}>
          {children}
-         {notification && (<div className='utils-fixed'>
+         {notification && (<div className='utils-fixed utils-radius-shadow'>
             <div
-               className={`${moveBackToRight ? 'move-back-to-right' : 'move-in-from-right'}` + ' utils-radius-shadow'}>
+               className={`${moveBackToRight ? 'move-back-to-right' : 'move-in-from-right'}` + ' utils-notification-container utils-center-vertically'}>
                <p className={classes + ' utils-notification-paragraph utils-notify utils-center-text'}>
                   {notification}
                </p>

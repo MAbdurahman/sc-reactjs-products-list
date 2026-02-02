@@ -401,7 +401,7 @@ export const GlobalStyles = createGlobalStyle`
    }
 
    .utils-radius-shadow {
-      border-radius: 0.25rem;
+      border-radius: var(--radius-200);
       box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px rgb(0,0,0,0.1), 0 2px 4px -2px rgb(0,0,0,0.1);
    }
 

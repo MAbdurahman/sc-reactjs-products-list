@@ -17,6 +17,7 @@ import {
    mobileTopLinks,
    mobileBottomLinks
 } from '../../assets/links/links.js';
+import CartIcon from '../CartIcon/index.jsx';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);

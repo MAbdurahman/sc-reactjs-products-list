@@ -101,7 +101,7 @@ export function validateUserInfo(userName, fullName, email, password ) {
       return {isValid: false, error: `Password must include at least one: '-+_!@#$%^&*?'!`};
 
    } else if (!password_trimmed.match(password_pattern)) {
-      return {isValid: false, error: 'Password must be at least 8 characters long!'};
+      return {isValid: false, error: 'Password must be between 8 and 32 characters long!'};
 
    } else {
       return {isValid: true};
@@ -146,7 +146,7 @@ export function validateEmailAndPassword(email, password) {
       return {isValid: false, error: `Password must include at least one: '-+_!@#$%^&*?'!`};
 
    } else if (!password_trimmed.match(password_pattern)) {
-      return {isValid: false, error: 'Password must be at least 8 characters long!'};
+      return {isValid: false, error: 'Password must be between 8 and 32 characters long!'};
 
    } else {
       return {isValid: true};
@@ -210,7 +210,7 @@ export function validatedNameEmailAndPassword(fullName, email, password) {
       return {isValid: false, error: `Password must include at least one: '-+_!@#$%^&*?'!`};
 
    } else if (!password_trimmed.match(password_pattern)) {
-      return {isValid: false, error: 'Password must be at least 8 characters long!'};
+      return {isValid: false, error: 'Password must be between 8 and 32 characters long!'};
 
    } else {
       return {isValid: true};

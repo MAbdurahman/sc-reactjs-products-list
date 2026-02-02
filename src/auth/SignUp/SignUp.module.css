@@ -1,6 +1,7 @@
+/*
 .sign__up__page {
    display: flex;
-   height: 100vh;
+   height: 50dvh;
    flex-direction: column;
    align-items: center;
    justify-content: center;
@@ -29,31 +30,36 @@
    color: hsl(196, 77%, 50%);
    cursor: pointer;
 }
+*/
 
 
 
 
 .sign__up {
    position: absolute;
-   top: 50%;
+   top: 55%;
    left: 50%;
    transform: translate(-50%, -50%);
    min-width: 440px;
    max-width: 440px;
    width: 440px;
-   height: fit-content;
+   height: 560px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+
    background-color: hsl(211.2, 0%, 98%);
    border-radius: 3px;
    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.185);
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 548px) {
    .sign__up {
-      width: 400px !important;
+      width: 300px !important;
+      max-width: 300px !important;
+      min-width: 300px !important;
+      height: 400px !important;
    }
 }
 
@@ -69,9 +75,12 @@
    }
 }
 
+
+
+
 .sign__up__title {
    margin-top: 1em;
-   margin-bottom: 0;
+   margin-bottom: -0.25em;
    font-weight: 700;
    text-align: center;
    text-transform: uppercase;
@@ -141,6 +150,22 @@
    cursor: pointer;
 }
 
+
+@media screen and (max-width: 548px) {
+   .sign__up__form__passwordGroup {
+      padding: 0.20em 0.75em 0.20em 0.20em;
+   }
+   #password {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+
+   .sign__up__form__passwordGroup {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 28px;
+   }
+}
 .sign__up__form__button {
    margin-top: 1em;
    padding-top: 0.75em;
@@ -184,6 +209,6 @@
 }
 
 .hide__label {
-   visibility: hidden;
+/*   visibility: hidden;*/
 
 }

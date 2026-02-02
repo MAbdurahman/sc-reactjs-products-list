@@ -1,5 +1,7 @@
 import React, {Fragment} from 'react';
 import {Route, Routes} from 'react-router-dom';
+import {Slide, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '../styles/Global.styled.jsx';
 import Navbar from '../components/Navbar/index.jsx';
 import NotFound from '../errors/NotFound/index.jsx';
@@ -34,6 +36,19 @@ export default function App() {
             <Route path='/no-results' element={<NoResults/>}/>
             <Route path='*' element={<NotFound/>}/>
          </Routes>
+         <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+            transition={Slide}
+            />
       </Fragment>
    );
 }
