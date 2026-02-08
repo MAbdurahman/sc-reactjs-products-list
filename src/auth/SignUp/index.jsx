@@ -4,7 +4,7 @@ import {useReducer, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import {EyeInvisibleOutlined, EyeOutlined} from '@ant-design/icons';
 import {getFirstName, validatedNameEmailAndPassword} from '../../assets/utils/functionsUtils';
-import PasswordStrengthMeter from '../../Components/PasswordStrengthMeter/index.jsx';
+import PasswordStrengthMeter from '../../Components/PasswordStrengthMeter';
 import {ACTIONS, initialState, signUpReducer} from './signUpReducer.js';
 import {useNavigate, Link} from 'react-router-dom';
 import {toast} from 'react-toastify';
