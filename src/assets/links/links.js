@@ -8,7 +8,7 @@ export const centerLinks = [
 ];
 
 export const rightLinks = [
-   {id: Number(2001), name: `Cart`, path: '/cart'},
+   {id: Number(2001), name: 'Cart', path: '/cart'},
    {id: Number(2002), name: 'Get Started', path: '/sign-in'}
 ];
 

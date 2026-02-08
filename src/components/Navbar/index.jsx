@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react';
 import Logo from '../Logo/index.jsx';
+import CartImage from '../CartImage/index.jsx';
 import {
    StyledHeader,
    StyledHeaderNavbarContainer,
@@ -9,15 +10,16 @@ import {
    StyledMobileCenterSection, StyledMobileTopNavLink,
    StyledMobileNavSection, StyledNavLinkCenter, StyledNavLinkRight,
    StyledSidePanel, StyledMobileBottomNavLink, StyledHamburger,
-   StyledHamburgerItemContainer, StyledLogoLink
+   StyledHamburgerItemContainer, StyledLogoLink, StyledSpan,
+
 } from '../../styles/Navbar.styled.jsx';
 import {
    centerLinks,
-   rightLinks,
+
    mobileTopLinks,
-   mobileBottomLinks
+
 } from '../../assets/links/links.js';
-import CartIcon from '../CartIcon/index.jsx';
+import {ShoppingCartOutlined} from '@ant-design/icons';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,12 +50,15 @@ export default function Navbar() {
                   }
                </StyledHeaderNavbarContainerCenter>
                <StyledHeaderNavbarContainerRight>
-                  {
-                     rightLinks.map((link) => (
-                        <StyledNavLinkRight key={link.id} to={link.path}
-                                            activeclassname='active'>{link.name}</StyledNavLinkRight>
-                     ))
-                  }
+                  <StyledNavLinkRight
+                     to='/cart'>
+                     <CartImage />
+                     <StyledSpan>2</StyledSpan>
+                  </StyledNavLinkRight>
+                  <StyledNavLinkRight
+                     to='/sign-in'>
+                     Get Started
+                  </StyledNavLinkRight>
                </StyledHeaderNavbarContainerRight>
                <StyledHamburgerItemContainer>
                   <StyledHamburger size={40} toggle={handleIsMenuOpen}
@@ -69,12 +74,13 @@ export default function Navbar() {
                         ))
                      }
                      <StyledMobileCenterSection/>
-                     {
-                        mobileBottomLinks.map((link) => (
-                           <StyledMobileBottomNavLink key={link.id} to={link.path} onClick={handleIsMenuOpen}
-                                                      activeclassname='active'>{link.name}</StyledMobileBottomNavLink>
-                        ))
-                     }
+                     <StyledMobileBottomNavLink to='/cart' onClick={handleIsMenuOpen}
+                                                activeclassname='active'>
+                        <CartImage />
+                        <StyledSpan>2</StyledSpan>
+                     </StyledMobileBottomNavLink>
+                     <StyledMobileBottomNavLink to='/sign-in' onClick={handleIsMenuOpen}
+                                                activeclassname='active'>Get Started</StyledMobileBottomNavLink>
                   </StyledMobileNavSection>
                </StyledSidePanel>
             </StyledHeaderNavbarInnerContainer>

@@ -113,10 +113,18 @@ export const LogoImage = styled.img`
       
    }
 `;
-
 export const StyledLogoLink = styled(NavLink)`
         text-decoration: none;
    `;
+
+export const StyledCartImage = styled.img`
+   position: relative;
+   top: 2px;
+   max-width: 40px;
+   width: 100%;
+   height: auto;
+`;
+
 
 export const StyledNavLinkCenter = styled(NavLink)`
    text-decoration: none;
@@ -148,6 +156,11 @@ export const StyledNavLinkRight = styled(NavLink)`
    margin-left: 2em;
    padding-bottom: 0.5em;
    transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+   
+   &:first-child {
+      position: relative;
+      z-index: 2;
+   }
 
    &:last-child {
       background: hsl(196, 77%, 55%);
@@ -180,6 +193,25 @@ export const StyledNavLinkRight = styled(NavLink)`
    @media (max-width: 820px) {
       display: none;
    }
+`;
+
+export const StyledSpan = styled.span`
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: -100;
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   font-size: 16px;
+   font-weight: 800;
+   text-align: center;
+   /*display: flex;
+   justify-content: center;*/
+   color: white;
+   background-color: red;
+   border-radius: 50%;
 `;
 
 
@@ -307,7 +339,8 @@ export const StyledMobileCenterSection = styled.div`
 
 export const StyledMobileBottomNavLink = styled(NavLink)`
    @media (max-width: 820px) {
-
+      position: relative;
+      z-index: 2;
       text-decoration: none;
       font-weight: 800;
       color: hsl(210, 0%, 98%);
@@ -315,6 +348,11 @@ export const StyledMobileBottomNavLink = styled(NavLink)`
       margin-right: auto;
       padding-bottom: 0.5em;
       transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
+      &:first-child {
+         position: relative;
+         z-index: 2;
+      }
 
       &:last-child {
          background: hsl(196, 77%, 55%);
