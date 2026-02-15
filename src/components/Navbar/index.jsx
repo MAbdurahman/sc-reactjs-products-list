@@ -15,7 +15,6 @@ import {
 } from '../../styles/Navbar.styled.jsx';
 import {
    centerLinks,
-
    mobileTopLinks,
 
 } from '../../assets/links/links.js';

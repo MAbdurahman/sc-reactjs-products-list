@@ -212,6 +212,13 @@ export const StyledSpan = styled.span`
    color: white;
    background-color: red;
    border-radius: 50%;
+   
+   @media (max-width: 820px) {
+      top: 8px;
+   }
+   @media (max-width: 540px) {
+      top: 0;
+   }
 `;
 
 
