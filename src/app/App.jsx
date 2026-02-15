@@ -48,6 +48,7 @@ export default function App() {
             pauseOnHover
             theme="colored"
             transition={Slide}
+            style={{ zIndex: 9999 }}
             />
       </Fragment>
    );

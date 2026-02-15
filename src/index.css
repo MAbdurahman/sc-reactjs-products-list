@@ -442,6 +442,15 @@ a:hover {
   background-color: hsl(48, 96%, 50%);
 }
 
+.Toastify__toast-body {
+  font-size: 16px; /* Change to your desired font size */
+}
+
+.Toastify__toast {
+  font-size: 16px; /* Change to your desired font size */
+}
+
+
 
 .move-in-from-right {
   animation-name: move-in-from-right;
