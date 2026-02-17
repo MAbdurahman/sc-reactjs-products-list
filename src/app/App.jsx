@@ -15,10 +15,8 @@ import Home from '../pages/Home/index.jsx';
 import Products from '../pages/Products/index.jsx';
 import Cart from '../components/Cart/index.jsx';
 
-
-
-
 export default function App() {
+
 
    return (
       <Fragment>
@@ -48,7 +46,8 @@ export default function App() {
             pauseOnHover
             theme="colored"
             transition={Slide}
-            style={{ zIndex: 9999 }}
+            style={{ zIndex: 10000 }}
+
             />
       </Fragment>
    );

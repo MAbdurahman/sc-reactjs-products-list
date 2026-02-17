@@ -10,6 +10,8 @@ import {ACTIONS, initialState, signInReducer} from './signInReducer.js';
 import {toast} from 'react-toastify';
 import {useNavigate} from 'react-router-dom';
 import useLocalStorage from '../../assets/hooks/useLocalStorage';
+import useCookie from '../../assets/hooks/useCookie.jsx';
+import Cookies from 'js-cookie';
 
 
 export default function SignIn() {
@@ -18,6 +20,7 @@ export default function SignIn() {
    const navigate = useNavigate();
    const userDataArr = [];
    const [data, setData] = useLocalStorage('e_Mart', []);
+
 
 
    const togglePasswordIsShowing = () => {
@@ -41,8 +44,10 @@ export default function SignIn() {
             email: state.email.value
          }
          userDataArr.push(userData);
+
          toast.success('User successfully signed in!');
          setData(userDataArr);
+         Cookies.set('e_Mart', `user: ${userData._id}, ${userData.email}`);
 
          setTimeout(() => {
             dispatch({type: ACTIONS.RESET_FORM});

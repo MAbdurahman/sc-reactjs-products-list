@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+   @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
    *,
    *::after,
    *::before {
@@ -115,7 +116,10 @@ export const GlobalStyles = createGlobalStyle`
       --color-semantic-alert-200: hsl(0, 96%, 43%);
       --color-semantic-alert-100: hsl(0, 96%, 48%);
 
-
+      --toastify-color-error: hsl(0, 96%, 33%);
+      --toastify-font-family: 'Mulish', sans-serif;
+      --toastify-z-index: 10000;
+      
       --ease-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
       --ease-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
       --ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
@@ -440,6 +444,22 @@ export const GlobalStyles = createGlobalStyle`
       background-color: hsl(48, 96%, 50%);
    }
 
+   .Toastify__toast-body {
+      font-size: 16px; /* Change to your desired font size */
+      background-color: darkred;
+      
+   }
+
+   .Toastify__toast {
+      font-size: 16px; /* Change to your desired font size */
+      font-weight: normal;
+      background-color: darkred; /* Change to your desired color */
+      color: white; /* Text color */
+   }
+
+   .Toastify__toast--error {
+      background-color: darkred; /* Darker red for errors */
+   }
 
    .move-in-from-right {
       animation-name: move-in-from-right;
