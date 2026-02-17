@@ -13,12 +13,7 @@ import {
    StyledHamburgerItemContainer, StyledLogoLink, StyledSpan,
 
 } from '../../styles/Navbar.styled.jsx';
-import {
-   centerLinks,
-   mobileTopLinks,
-
-} from '../../assets/links/links.js';
-import {ShoppingCartOutlined} from '@ant-design/icons';
+import {centerLinks, mobileTopLinks,} from '../../assets/links/links.js';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);

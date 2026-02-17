@@ -281,7 +281,7 @@ a:hover {
   opacity: 1;
 }
 
-.app {
+.app.fade-in {
   z-index: 1;
 }
 
@@ -467,6 +467,12 @@ a:hover {
   background-color: darkred; /* Darker red for errors */
 }
 
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 3500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
 
 
 
@@ -535,4 +541,9 @@ a:hover {
   100% {
     transform: translateX(2000px);
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

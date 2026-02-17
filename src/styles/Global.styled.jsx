@@ -278,7 +278,16 @@ export const GlobalStyles = createGlobalStyle`
       cursor: pointer;
       opacity: 1;
    }
-   
+   .app.fade-in {
+      z-index: 1;
+   }
+
+   .fade-in {
+      animation-name: fadeIn;
+      animation-duration: 3500ms;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+   }
    /*===============================================================
              utility classes
    ==================================================================*/
@@ -525,6 +534,11 @@ export const GlobalStyles = createGlobalStyle`
       100% {
          transform: translateX(2000px);
       }
+   }
+
+   @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
    }
    
 `;

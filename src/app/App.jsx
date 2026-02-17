@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {Slide, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,41 +14,57 @@ import Contact from '../pages/Contact/index.jsx';
 import Home from '../pages/Home/index.jsx';
 import Products from '../pages/Products/index.jsx';
 import Cart from '../components/Cart/index.jsx';
+import Preloader from '../components/Preloader/index.jsx';
 
 export default function App() {
+   const [isLoading, setIsLoading] = useState(true);
+
+   useEffect(() => {
+      const timerId = setTimeout(() => {
+         setIsLoading(false);
+      }, 3500);
+      return () => clearTimeout(timerId);
+
+   }, []);
 
 
    return (
-      <div className='app'>
-         <GlobalStyles/>
-         <Navbar/>
-         <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<About/>}/>
-            <Route path='/products' element={<Products/>}/>
-            <Route path='/contact' element={<Contact/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/sign-in' element={<SignIn/>}/>
-            <Route path='/sign-up' element={<SignUp/>}/>
-            <Route path='/empty-cart' element={<EmptyCart/>}/>
-            <Route path='/no-results' element={<NoResults/>}/>
-            <Route path='*' element={<NotFound/>}/>
-         </Routes>
-         <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick={false}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-            transition={Slide}
-            style={{ zIndex: 10000 }}
+      <div>
+         {
+            isLoading ? (<Preloader/>)
+               : (<div className='app'>
+                  <GlobalStyles/>
+                  <Navbar/>
+                  <Routes>
+                     <Route path='/' element={<Home/>}/>
+                     <Route path='/about' element={<About/>}/>
+                     <Route path='/products' element={<Products/>}/>
+                     <Route path='/contact' element={<Contact/>}/>
+                     <Route path='/cart' element={<Cart/>}/>
+                     <Route path='/sign-in' element={<SignIn/>}/>
+                     <Route path='/sign-up' element={<SignUp/>}/>
+                     <Route path='/empty-cart' element={<EmptyCart/>}/>
+                     <Route path='/no-results' element={<NoResults/>}/>
+                     <Route path='*' element={<NotFound/>}/>
+                  </Routes>
+                  <ToastContainer
+                     position='top-right'
+                     autoClose={5000}
+                     hideProgressBar={false}
+                     newestOnTop={false}
+                     closeOnClick={false}
+                     rtl={false}
+                     pauseOnFocusLoss
+                     draggable
+                     pauseOnHover
+                     theme='colored'
+                     transition={Slide}
+                     style={{zIndex: 10000}}
 
-            />
+                  />
+               </div>)
+         }
       </div>
+
    );
 }

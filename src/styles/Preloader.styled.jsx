@@ -1,8 +1,7 @@
+import styled from 'styled-components';
 
 
-
-
-.preloader {
+export const StyledPreloaderContainer = styled.div`
    position: fixed;
    top: 0;
    left: 0;
@@ -21,14 +20,13 @@
    justify-content: center;
    scrollbar-width: none;
    -ms-overflow-style: none;
-}
-.preloader__gif {
+
+`;
+
+export const StyledPreloader = styled.img`
    width: 66.6666%;
    align-self: center;
-}
-
-@media screen and (min-width: 1030px) {
-   .preloader__gif {
+   @media screen and (min-width: 1030px) {
       width: 25%;
-   }
-}
+   
+`
