@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 100;
+   z-index: 10;
    min-height: 80px;
    width: 100%;
    background-color: var(--color-neutral-800);
@@ -18,11 +18,13 @@ export const StyledHeader = styled.header`
 
 export const StyledHeaderNavbarContainer = styled.div`
    position: relative;
+   z-index: 10;
    width: 100%;
    margin-left: auto;
    margin-right: auto;
    padding-right: 16px;
    padding-left: 16px;
+   
 
    @media screen and (min-width: 576px) {
       max-width: 544px;
@@ -210,7 +212,7 @@ export const StyledSpan = styled.span`
    /*display: flex;
    justify-content: center;*/
    color: white;
-   background-color: red;
+   background-color: hsl(0, 96%, 33%);
    border-radius: 50%;
    
    @media (max-width: 820px) {

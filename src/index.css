@@ -281,7 +281,9 @@ a:hover {
   opacity: 1;
 }
 
-
+.app {
+  z-index: 1;
+}
 
 
 

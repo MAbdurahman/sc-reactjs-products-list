@@ -19,7 +19,7 @@ export default function App() {
 
 
    return (
-      <Fragment>
+      <div className='app'>
          <GlobalStyles/>
          <Navbar/>
          <Routes>
@@ -49,6 +49,6 @@ export default function App() {
             style={{ zIndex: 10000 }}
 
             />
-      </Fragment>
+      </div>
    );
 }
