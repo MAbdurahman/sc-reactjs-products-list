@@ -20,17 +20,11 @@ export default function StarRating() {
 
                      type='radio'
                      value={givenRating}
-                     onClick={() => {
-                        setRating(givenRating);
-                     /*   alert(
-                           `Are you sure you want to give 
-                                    ${givenRating} stars ?`
-                        );*/
-                     }}
+                     onClick={() => {setRating(givenRating)}}
                   />
                   <StyledStarRating>
                      <FaStar
-                        size={20}
+                        size={32}
                         color={
                            givenRating < rating || givenRating === rating
                               ? 'hsl(44.94, 96%, 50%)'
