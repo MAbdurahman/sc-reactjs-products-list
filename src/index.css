@@ -281,7 +281,7 @@ a:hover {
   opacity: 1;
 }
 
-.app.fade-in {
+.app {
   z-index: 1;
 }
 
@@ -469,13 +469,10 @@ a:hover {
 
 .fade-in {
   animation-name: fadeIn;
-  animation-duration: 3500ms;
+  animation-duration: 3000ms;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-
-
-
 
 .move-in-from-right {
   animation-name: move-in-from-right;

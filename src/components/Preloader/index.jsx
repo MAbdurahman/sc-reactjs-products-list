@@ -8,9 +8,9 @@ export default function Preloader() {
    const preloaderImageRef = useRef(null);
 
    useEffect(() => {
-      preloaderRef.current.style.transition = 'opacity 5500ms ease-in-out';
+      preloaderRef.current.style.transition = 'opacity 5250ms ease-in-out';
       preloaderRef.current.style.opacity = '0';
-      preloaderImageRef.current.style.transition = 'opacity 5500ms ease-in-out';
+      preloaderImageRef.current.style.transition = 'opacity 5250ms ease-in-out';
       preloaderImageRef.current.style.opacity = '0';
    })
 

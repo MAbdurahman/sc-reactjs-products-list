@@ -32,7 +32,7 @@ export default function App() {
       <div>
          {
             isLoading ? (<Preloader/>)
-               : (<div className='app'>
+               : (<div className='app fade-in'>
                   <GlobalStyles/>
                   <Navbar/>
                   <Routes>
