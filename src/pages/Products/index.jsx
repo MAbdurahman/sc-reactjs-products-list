@@ -1,5 +1,8 @@
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './Products.module.css';
+import StarRating from '../../components/StarRating/index.jsx';
+/*import {StarRating} from '../../styles/RatingStar.styled.jsx';*/
+
 
 export default function Products() {
 
