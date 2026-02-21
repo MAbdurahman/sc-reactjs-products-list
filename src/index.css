@@ -399,7 +399,8 @@ a:hover {
 
 
 .utils-notification-container {
-
+  max-width: 320px;
+  min-width: 320px;
 
 }
 
@@ -411,6 +412,7 @@ a:hover {
 .utils-notification-paragraph {
   padding: 8px;
   font-weight: 600;
+  font-size: calc(10px + 2vmin);
   color: rgb(249,250,251);
 }
 
@@ -449,7 +451,11 @@ a:hover {
 .bg-semantic-w-400 {
   background-color: hsl(48, 96%, 50%);
 }
-
+.Toastify {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
 .Toastify__toast-body {
   font-size: 16px; /* Change to your desired font size */
   background-color: darkred;

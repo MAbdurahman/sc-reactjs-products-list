@@ -245,7 +245,9 @@ export function formatWithDecimals(number) {
  * @returns {string}
  */
 function makeString(object) {
-   if (object == null) return '';
+   if (object == null) {
+      return '';
+   }
    return '' + object;
 }
 
@@ -255,7 +257,7 @@ function makeString(object) {
  * @param lowercaseRest
  * @returns {string}
  */
-export function capitalizeFirstL(str, lowercaseRest) {
+export function capitalizeFirst(str, lowercaseRest) {
    str = makeString(str);
    var remainingChars = !lowercaseRest
       ? str.slice(1)

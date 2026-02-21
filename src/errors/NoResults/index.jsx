@@ -2,6 +2,7 @@ import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './NoResults.module.css';
 import {Link} from 'react-router-dom';
 import NoResultsImage from '../../assets/img/no-results.svg';
+import NotFoundGif from '../../assets/img/not-found.gif';
 
 
 

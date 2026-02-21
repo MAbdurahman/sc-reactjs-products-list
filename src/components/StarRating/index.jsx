@@ -7,7 +7,7 @@ import {
 } from '../../styles/RatingStar.styled.jsx';
 
 export default function StarRating() {
-   const [rating, setRating] = useState(0);
+   const [rating, setRating] = useState();
 
    return (
       <StyledRadiobuttonContainer>
@@ -17,14 +17,13 @@ export default function StarRating() {
                <label
                key={index}>
                   <StyledRadiobutton
-
                      type='radio'
                      value={givenRating}
                      onClick={() => {setRating(givenRating)}}
                   />
                   <StyledStarRating>
                      <FaStar
-                        size={32}
+                        size={20}
                         color={
                            givenRating < rating || givenRating === rating
                               ? 'hsl(44.94, 96%, 50%)'

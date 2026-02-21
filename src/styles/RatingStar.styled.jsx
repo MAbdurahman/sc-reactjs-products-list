@@ -4,17 +4,17 @@ import styled from 'styled-components';
 
 export const StyledRadiobuttonContainer = styled.div`
    display: flex;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
-   min-height: 60vh;
-   font-size: 60px;
+   min-height: fit-content;
+   //font-size: 60px;
 `
 export const StyledRadiobutton = styled.input`
    display: none;
 `
 export const StyledStarRating = styled.div`
    display: inline-block;
-   font-size: 2rem;
+   font-size: 1rem;
    color: ${props => (props.filled ? 'yellow' : 'grey')};
    cursor: pointer;
    transition: transform 0.1s;

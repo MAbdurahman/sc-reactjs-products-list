@@ -16,7 +16,9 @@
 }
 
 .empty__cart__image {
-   width: 150%;
+   display: block;
+   width: 33%;
+   margin-bottom: 2em;
 }
 
 .empty__cart__paragraph {

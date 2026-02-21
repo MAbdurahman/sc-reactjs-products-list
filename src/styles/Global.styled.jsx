@@ -459,6 +459,7 @@ export const GlobalStyles = createGlobalStyle`
       
    }
 
+  
    .Toastify__toast {
       font-size: 16px; /* Change to your desired font size */
       font-weight: normal;
@@ -469,6 +470,8 @@ export const GlobalStyles = createGlobalStyle`
    .Toastify__toast--error {
       background-color: darkred; /* Darker red for errors */
    }
+
+   
 
    .move-in-from-right {
       animation-name: move-in-from-right;

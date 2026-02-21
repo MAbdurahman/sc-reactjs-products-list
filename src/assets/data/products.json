@@ -4,28 +4,28 @@
    "products": [
       {
          "id": 1,
-         "title": "Essence Mascara Lash Princess",
+         "title": "Essence Mascara Lash",
          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
          "category": [
             "beauty",
             "mascara"
          ],
          "price": 9.99,
-         "rating": 2.56,
+         "rating": 3,
          "stock": 99,
          "brand": "Essence",
          "image": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
       },
       {
          "id": 2,
-         "title": "Eyeshadow Palette with Mirror",
+         "title": "Eyeshadow Palette",
          "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
          "category": [
             "beauty",
             "eyeshadow"
          ],
          "price": 19.99,
-         "rating": 2.86,
+         "rating": 3,
          "stock": 34,
          "brand": "Glamour Beauty",
          "image": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"
@@ -39,7 +39,7 @@
             "face powder"
          ],
          "price": 14.99,
-         "rating": 4.64,
+         "rating": 5,
          "stock": 89,
          "brand": "Velvet Touch",
          "image": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp"
@@ -53,7 +53,7 @@
             "lipstick"
          ],
          "price": 12.99,
-         "rating": 4.36,
+         "rating": 4,
          "stock": 91,
          "brand": "Chic Cosmetics",
          "image": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp"
@@ -67,7 +67,7 @@
             "nail polish"
          ],
          "price": 8.99,
-         "rating": 4.32,
+         "rating": 4,
          "stock": 79,
          "brand": "Nail Couture",
          "image": "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp"
@@ -81,7 +81,7 @@
             "perfumes"
          ],
          "price": 49.99,
-         "rating": 4.37,
+         "rating": 4,
          "stock": 29,
          "brand": "Calvin Klein",
          "image": "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp"
@@ -95,7 +95,7 @@
             "perfumes"
          ],
          "price": 129.99,
-         "rating": 4.26,
+         "rating": 4,
          "stock": 58,
          "brand": "Chanel",
          "image": "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp"
@@ -109,80 +109,11 @@
             "perfumes"
          ],
          "price": 89.99,
-         "rating": 3.8,
+         "rating": 4,
          "stock": 98,
          "brand": "Dior",
          "image": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
-      },
-      {
-         "id": 9,
-         "title": "Dolce Shine Eau de",
-         "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
-         "category": [
-            "fragrances",
-            "perfumes"
-         ],
-         "price": 69.99,
-         "rating": 3.96,
-         "stock": 4,
-         "brand": "Dolce & Gabbana",
-         "image": "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp"
-      },
-      {
-         "id": 10,
-         "title": "Gucci Bloom Eau de",
-         "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
-         "category": [
-            "fragrances",
-            "perfumes"
-         ],
-         "price": 79.99,
-         "rating": 2.74,
-         "stock": 91,
-         "brand": "Gucci",
-         "image": "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp"
-      },
-      {
-         "id": 11,
-         "title": "Annibale Colombo Bed",
-         "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
-         "category": [
-         "furniture",
-         "beds"
-      ],
-         "price": 1899.99,
-         "rating": 4.77,
-         "stock": 88,
-         "brand": "Annibale Colombo",
-         "image": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
-      },
-      {
-         "id": 12,
-         "title": "Annibale Colombo Sofa",
-         "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
-         "category": [
-            "furniture",
-            "sofas"
-         ],
-         "price": 2499.99,
-         "rating": 3.92,
-         "stock": 60,
-         "brand": "Annibale Colombo",
-         "image": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"
-      },
-      {
-         "id": 13,
-         "title": "Bedside Table African Cherry",
-         "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
-         "category":  [
-            "furniture",
-            "bedside tables"
-         ],
-         "price": 299.99,
-         "rating": 2.87,
-         "stock": 64,
-         "brand": "Furniture Co.",
-         "image": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"
       }
+
    ]
 }
