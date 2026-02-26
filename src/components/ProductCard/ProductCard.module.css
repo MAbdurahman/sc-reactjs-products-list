@@ -3,6 +3,8 @@
    position: relative;
    width: 304px;
    height: auto;
+   font-size: 0.75rem;
+   font-weight: 500;
    border: 1px solid hsl(196, 0%, 48%);
    border-radius: var(--radius-300);
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -22,6 +24,8 @@
    flex-direction: column;
    padding: 1em;
    text-align: left;
+   font-size: 0.75rem;
+   font-weight: 500;
 
    background-color: hsl(196, 0%, 88%);
 
@@ -30,14 +34,20 @@
 .card_title {
    text-align: left;
    font-weight: var(--font-weight-semibold);
+   font-size: 0.85rem;
+   line-height: 1.5;
+
 
 }
 .card_subtitle {
    text-align: left;
    font-weight: var(--font-weight-medium);
+   font-size: 0.85rem;
 }
 
 .card_description {
+   font-size: 0.85rem;
+
    color: var(--color-neutral-900);
    display: -webkit-box;
    -webkit-box-orient: vertical;

@@ -1,0 +1,229 @@
+{
+
+  "products": [
+    {
+      "id": 1,
+      "name": "Mid-century Modern Chair",
+      "description": "Whether you're looking for a cozy reading nook, a stylish seating option, or a place to unwind, there’s nothing that beats a classic lounge chair. Unwind from the day (or year) with this inviting lounge chair.",
+      "category": [
+        "mid-century modern",
+        ""
+      ],
+      "price": 999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "Dior",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/tmrhkbyjsg4enmyutwe3.png"
+    },
+    {
+      "id": 2,
+      "name": "Butterfly Back Chair",
+      "description": "The butterfly back chair is not just for seating; they are statement pieces that can transform a space while providing comfort and style. There's nothing that beats a classic lounge chair. Unwind from the day with this inviting lounge chair.",
+      "category": [
+        "contemporary",
+        ""
+      ],
+      "price": 899.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/oafqcgtak9upe6fbsklm.png"
+    },
+    {
+      "id": 3,
+      "name": "Minimalist Chair",
+      "description": "The image shows a modern chair with a light wooden seat and backrest, supported by black metal legs. The chair features a curved backrest and a minimalist design with clean lines, set against a solid black background.",
+      "category": [
+        "minimalist",
+        ""
+      ],
+      "price": 999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/lwsy7z8sqmcflkb6bgvy.png"
+    },
+    {
+      "id": 4,
+      "name": "Modern Blue Armchair",
+      "description": "The blur armchair displays a modern armchair with a wooden frame and light blue upholstery. It features cushioned seating, a backrest, and armrests, showcasing a minimalist yet elegant design.",
+      "category": [
+        "modern",
+        ""
+      ],
+      "price": 1199.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/hsoedr85wv8giy5hbubz.png"
+    },
+    {
+      "id": 5,
+      "name": "Modern Brown Leather Chair",
+      "description": "The image shows a modern armchair with a brown leather - upholstered seat, backrest, and armrests. The chair has a sleek design with metallic (silver - toned) frame and armrest supports. It features a cushioned seat and backrest for comfort, set against a plain black background.",
+      "category": [
+        "modern",
+        "leather"
+      ],
+      "price": 2999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "Dior",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/f7pxxfparaa1ffusdrvg.png"
+    },
+    {
+      "id": 6,
+      "name": "Minimalist Wooden Chair",
+      "description": "The image shows a chair with a wooden frame and black upholstered seat and backrest. It has armrests and features a minimalist design with light wood and black elements.",
+      "category": [
+        "minimalist",
+        "wooden"
+      ],
+      "price": 999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/srdmtm5rrsnsc2iszrhg.png"
+    },
+    {
+      "id": 7,
+      "name": "Modern Black Chair",
+      "description": " The modern black chair with a curved backrest, armrests, and a woven seat, designed with clean lines and minimalistic features. The chair is presented against a solid black background, emphasizing its sleek and contemporary aesthetic.",
+      "category": [
+        "modern",
+        "minimalist"
+      ],
+      "price": 1199.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/ezi0zwzv27tky0rw7rrh.png"
+    },
+    {
+      "id": 8,
+      "name": "Contemporary Wooden Chair",
+      "description": "A modern lounge chair is not just for seating; they are statement pieces that can transform a space while providing comfort and style. There's nothing that beats a classic lounge chair. Unwind from the day with this inviting lounge chair.",
+      "category": [
+        "contemporary",
+        "wooden"
+      ],
+      "price": 999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/uuqyghynqi5jdstrsbq6.png"
+    },
+    {
+      "id": 9,
+      "name": "Louis XV Ghost Chair",
+      "description": "Whether you're looking for a cozy reading nook, a stylish seating option, or a place to unwind, there’s nothing that beats a classic lounge chair. Unwind from the day (or year) with this inviting lounge chair.",
+      "category": [
+        "post-modern",
+        "contemporary"
+      ],
+      "price": 1999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/dvutcdhti84mfsngvehy.png"
+    },
+    {
+      "id": 10,
+      "name": "Modern Leather Chair",
+      "description": "Whether you're looking for a cozy reading nook, a stylish seating option, or a place to unwind, there’s nothing that beats a classic lounge chair. Unwind from the day (or year) with this inviting lounge chair.",
+      "category": [
+        "modern",
+        "leather"
+      ],
+      "price": 4999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/rlziqsues0mjom8bkffx.png"
+    },
+    {
+      "id": 11,
+      "name": "Votteler Chair",
+      "description": "Whether you're looking for a cozy reading nook, a stylish seating option, or a place to unwind, there’s nothing that beats a classic lounge chair. Unwind from the day (or year) with this inviting lounge chair.",
+      "category": [
+        "modern",
+        ""
+      ],
+      "price": 2199.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/bvj98ggqbzb3qoif4c7x.png"
+    },
+    {
+      "id": 12,
+      "name": "French Mid-century Modern Chair",
+      "description": "Whether you're looking for a cozy reading nook, a stylish seating option, or a place to unwind, there’s nothing that beats a classic lounge chair. Unwind from the day (or year) with this inviting lounge chair.",
+      "category": [
+        "French",
+        "mid-century modern"
+      ],
+      "price": 1799.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/njdi9jyjvjtrwxru9qi4.png"
+    },
+    {
+      "id": 13,
+      "name": "Fritz Hanson Egg Chair",
+      "description": "The image shows a light gray, egg - shaped chair with a smooth, curved design. It has a high back, rounded seat, and is supported by a metallic swivel base with four angled legs.",
+      "category": [
+        "contemporary",
+        ""
+      ],
+      "price": 5999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/bfj27fztigv2jqwwpto7.png"
+    },
+    {
+      "id": 14,
+      "name": "Modern Wooden Chair",
+      "description": "The modern wooden chair shows a modern chair with a wooden frame and brown leather seating and backrest. It features curved armrests, a contoured backrest, and a sleek design. The chair has a minimalist aesthetic with clean lines and a combination of wood and leather materials.",
+      "category": [
+        "modern",
+        "wooden"
+      ],
+      "price": 999.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/hs70xkfzlymce2awwagh.png"
+    },
+    {
+      "id": 15,
+      "name": "Bauhaus Modern Chair",
+      "description": "The image shows a modern chair with a sleek, minimalist design. It features a chrome - plated metal frame and orange fabric for the seating and backrest. The chair has angular lines and an innovative structural design, showcasing mid - century modern aesthetics.",
+      "category": [
+        "modern",
+        "minimalist"
+      ],
+      "price": 1899.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/tjtgakegj0xdzw675qhh.png"
+    },
+    {
+      "id": 16,
+      "name": "French Bergere Chair",
+      "description": "The image shows a classic-style armchair with a light wooden frame and dark blue upholstered seat and backrest. The chair features curved armrests, a scalloped top edge on the backrest, and elegantly curved legs. The upholstery has a subtle pattern, and the chair has a traditional, ornate design.",
+      "category": [
+        "French",
+        "classical"
+      ],
+      "price": 2199.99,
+      "rating": 4,
+      "stock": 98,
+      "brand": "",
+      "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/a9ychylqqau9nccmawgf.png"
+    }
+  ]
+}

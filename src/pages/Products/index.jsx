@@ -4,7 +4,8 @@ import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './Products.module.css';
 import StarRating from '../../components/StarRating/index.jsx';
 /*import {StarRating} from '../../styles/RatingStar.styled.jsx';*/
-import data from '../../assets/data/products.json';
+/*import data from '../../assets/data/products.json';*/
+import data from '../../assets/data/chairs.json'
 import ProductCard from '../../components/ProductCard/index.jsx';
 
 
