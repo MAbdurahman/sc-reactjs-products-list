@@ -59,7 +59,7 @@ export const StyledHeaderNavbarContainerLeft = styled.div`
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: center;
+   /*justify-content: center;*/
    flex: 1;
 
    @media only screen and (max-width: 820px) {
@@ -84,7 +84,8 @@ export const StyledHeaderNavbarContainerRight = styled.div`
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: center;
+   justify-content: flex-end;
+  
    flex: 1;
 
    @media only screen and (max-width: 820px) {

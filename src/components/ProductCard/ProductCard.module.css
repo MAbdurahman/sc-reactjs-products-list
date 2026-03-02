@@ -1,6 +1,8 @@
 
 .card {
    position: relative;
+   display: flex;
+   flex-direction: column;
    width: 304px;
    height: auto;
    font-size: 0.75rem;
@@ -12,13 +14,23 @@
 
 .card_image {
    display: block;
-   max-width: 100%;
-   width: 304px;
-   height: auto;
-   object-fit: cover;
+   /*max-width: 100%;*/
+   width: 100%;
+   /*height: 320px;*/
+   /*object-fit: cover;*/
+   border-top-left-radius: var(--radius-300);
+   border-top-right-radius: var(--radius-300);
    background-color: var(--color-neutral-000);
 }
+.card_top {
+   display: flex;
+   flex-direction: column;
+}
 
+.card_bottom {
+   display: flex;
+   flex-direction: column;
+}
 .card_body {
    display: flex;
    flex-direction: column;
@@ -39,10 +51,10 @@
 
 
 }
-.card_subtitle {
+.card_price {
    text-align: left;
-   font-weight: var(--font-weight-medium);
    font-size: 0.85rem;
+   font-weight: var(--font-weight-semibold);
 }
 
 .card_description {
@@ -66,12 +78,14 @@
 }
 
 .card_button {
+   width: 100%;
    font-weight: var(--font-weight-bold);
    color: hsl(210, 0%, 98%);
    background-color: hsl(196, 77%, 35%);;
    padding: 0.5rem 1rem;
    text-align: center;
-   border-radius: 8px;
+   text-transform: uppercase;
+   border-radius: 5px;
    border: none;
    outline: 0;
    transition: background-color 0.333s ease-in-out;

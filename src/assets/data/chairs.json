@@ -32,7 +32,7 @@
     {
       "id": 3,
       "name": "Minimalist Chair",
-      "description": "The image shows a modern chair with a light wooden seat and backrest, supported by black metal legs. The chair features a curved backrest and a minimalist design with clean lines, set against a solid black background.",
+      "description": "The Minimalist Chair is a modern chair with a light wooden seat and backrest, supported by black metal legs. The chair features a curved backrest and a minimalist design with clean lines, set against a solid black background.",
       "category": [
         "minimalist",
         ""
@@ -46,7 +46,7 @@
     {
       "id": 4,
       "name": "Modern Blue Armchair",
-      "description": "The blur armchair displays a modern armchair with a wooden frame and light blue upholstery. It features cushioned seating, a backrest, and armrests, showcasing a minimalist yet elegant design.",
+      "description": "The Blue Armchair displays a modern armchair with a wooden frame and light blue upholstery. It features cushioned seating, a backrest, and armrests, showcasing a minimalist yet elegant design.",
       "category": [
         "modern",
         ""
@@ -60,7 +60,7 @@
     {
       "id": 5,
       "name": "Modern Brown Leather Chair",
-      "description": "The image shows a modern armchair with a brown leather - upholstered seat, backrest, and armrests. The chair has a sleek design with metallic (silver - toned) frame and armrest supports. It features a cushioned seat and backrest for comfort, set against a plain black background.",
+      "description": "The Modern Brown Leather Chair is a modern armchair with a brown leather - upholstered seat, backrest, and armrests. The chair has a sleek design with metallic (silver - toned) frame and armrest supports. It features a cushioned seat and backrest for comfort, set against a plain black background.",
       "category": [
         "modern",
         "leather"
@@ -74,7 +74,7 @@
     {
       "id": 6,
       "name": "Minimalist Wooden Chair",
-      "description": "The image shows a chair with a wooden frame and black upholstered seat and backrest. It has armrests and features a minimalist design with light wood and black elements.",
+      "description": "The Minimalist Wooden Chair is a chair with a wooden frame and black upholstered seat and backrest. It has armrests and features a minimalist design with light wood and black elements.",
       "category": [
         "minimalist",
         "wooden"
@@ -88,7 +88,7 @@
     {
       "id": 7,
       "name": "Modern Black Chair",
-      "description": " The modern black chair with a curved backrest, armrests, and a woven seat, designed with clean lines and minimalistic features. The chair is presented against a solid black background, emphasizing its sleek and contemporary aesthetic.",
+      "description": " The Modern Black Chair with a curved backrest, armrests, and a woven seat, designed with clean lines and minimalistic features. The chair is presented against a solid black background, emphasizing its sleek and contemporary aesthetic.",
       "category": [
         "modern",
         "minimalist"
@@ -102,7 +102,7 @@
     {
       "id": 8,
       "name": "Contemporary Wooden Chair",
-      "description": "A modern lounge chair is not just for seating; they are statement pieces that can transform a space while providing comfort and style. There's nothing that beats a classic lounge chair. Unwind from the day with this inviting lounge chair.",
+      "description": "The Contemporary Wooden Chair is not just for seating; it is a statement pieces that can transform a space while providing comfort and style. There's nothing that beats a Contemporary Wooden Chair. Unwind from the day with this inviting wooden chair.",
       "category": [
         "contemporary",
         "wooden"

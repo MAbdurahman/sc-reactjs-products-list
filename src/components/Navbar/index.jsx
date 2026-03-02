@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useContext, useReducer} from 'react';
 import Logo from '../Logo/index.jsx';
 import CartImage from '../CartImage/index.jsx';
 import {
@@ -14,11 +14,19 @@ import {
 
 } from '../../styles/Navbar.styled.jsx';
 import {centerLinks, mobileTopLinks,} from '../../assets/links/links.js';
+import {CartContext} from '../../assets/context/cartContext.jsx';
+import {cartInitialState, cartReducer} from '../Cart/cartReducer.js';
+import EmptyCart from '../../errors/EmptyCart/index.jsx';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
    const sidePanelRef = useRef(null);
+   /*const {cartState} = useContext(CartContext)*/
+   const [cartState, cartDispatch] = useReducer(cartReducer, cartInitialState)
+
+   console.log(cartState.cartItems.length)
+
+
 
    const handleIsMenuOpen = () => {
       setIsMenuOpen(!isMenuOpen);
@@ -47,7 +55,8 @@ export default function Navbar() {
                   <StyledNavLinkRight
                      to='/cart'>
                      <CartImage />
-                     <StyledSpan>2</StyledSpan>
+                     <StyledSpan>{cartState.cartItems.length}</StyledSpan>
+
                   </StyledNavLinkRight>
                   <StyledNavLinkRight
                      to='/sign-in'>
