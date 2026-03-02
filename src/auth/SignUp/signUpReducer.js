@@ -37,7 +37,7 @@ export const signUpReducer = (state = initialState, action) => {
 
    switch (type) {
     case ACTIONS.USERNAME_CHANGE:
-       const username_trimmed = payload.trim();
+       { const username_trimmed = payload.trim();
        const isUsernameValid = username_trimmed.match(username_pattern);
        return {
           ...state,
@@ -45,10 +45,10 @@ export const signUpReducer = (state = initialState, action) => {
              value: username_trimmed,
              isValid: isUsernameValid
           }
-       }
+       } }
 
       case ACTIONS.FULLNAME_CHANGE:
-         const fullname_trimmed = payload.trim();
+         { const fullname_trimmed = payload.trim();
          const isFullnameValid = fullname_trimmed.match(fullname_pattern);
          return {
             ...state,
@@ -56,10 +56,10 @@ export const signUpReducer = (state = initialState, action) => {
                value: fullname_trimmed,
                isValid: isFullnameValid
             }
-         };
+         }; }
 
       case ACTIONS.EMAIL_CHANGE:
-         const email_trimmed = payload.trim();
+         { const email_trimmed = payload.trim();
          const isEmailValid =  email_trimmed.match(email_pattern)
          return {
             ...state,
@@ -67,10 +67,10 @@ export const signUpReducer = (state = initialState, action) => {
                value: email_trimmed,
                isValid: isEmailValid
             }
-         };
+         }; }
 
       case ACTIONS.PASSWORD_CHANGE:
-         const password_trimmed = payload.trim();
+         { const password_trimmed = payload.trim();
          const isPasswordValid = password_trimmed.match(password_pattern);
          return {
             ...state,
@@ -78,7 +78,7 @@ export const signUpReducer = (state = initialState, action) => {
                value: password_trimmed,
                isValid: isPasswordValid
             }
-         };
+         }; }
 
       case ACTIONS.RESET_FORM:
          return initialState;

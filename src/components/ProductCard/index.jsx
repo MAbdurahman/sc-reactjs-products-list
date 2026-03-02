@@ -8,6 +8,10 @@ import {CART_ACTIONS} from '../Cart/cartReducer.js';
 export default function ProductCard({product}) {
    const {cartDispatch} = useContext(CartContext);
 
+   const handleAddToCart = () => {
+      cartDispatch({type: CART_ACTIONS.ADD_TO_CART, payload: product});
+   }
+
    return (
 
       <div className={styles.card}>
@@ -22,7 +26,7 @@ export default function ProductCard({product}) {
          <div className={styles.card_footer}>
             <button type='button'
                     className={styles.card_button}
-                    onClick={() => {cartDispatch({type: CART_ACTIONS.ADD_TO_CART, payload: product})}}>Add To Cart</button>
+                    onClick={handleAddToCart}>Add To Cart</button>
          </div>
          </div>
       </div>

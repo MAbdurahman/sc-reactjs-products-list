@@ -77,7 +77,7 @@ export const cartReducer = (state = cartInitialState, action) => {
             ...state,
             cartItems: updatedCartItems,
             totalItems: state.totalItems - itemToDecrease.quantity,
-            totalPrice: state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity)
+            totalPrice: (state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity))
          };
       }
 

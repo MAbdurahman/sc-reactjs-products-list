@@ -1,18 +1,11 @@
-import React, {useContext} from 'react';
-
+import React from 'react';
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './Products.module.css';
-import StarRating from '../../components/StarRating/index.jsx';
-/*import {StarRating} from '../../styles/RatingStar.styled.jsx';*/
-
-
-import data from '../../assets/data/chairs.json';
-import {CartContext} from '../../assets/context/cartContext.jsx';
+import useCart from '../../assets/hooks/useCart.jsx';
 import ProductCard from '../../components/ProductCard/index.jsx';
 
 export default function Products() {
-
-   const{products} = useContext(CartContext);
+   const {products} = useCart();
 
    return (
       <div className='utils-container'>
