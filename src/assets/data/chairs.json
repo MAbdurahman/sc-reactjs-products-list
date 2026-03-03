@@ -9,7 +9,7 @@
         "mid-century modern",
         ""
       ],
-      "price": 999.99,
+      "price": 999,
       "rating": 4,
       "stock": 98,
       "brand": "Dior",
@@ -23,10 +23,10 @@
         "contemporary",
         ""
       ],
-      "price": 899.99,
+      "price": 899,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Bernhardt",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/oafqcgtak9upe6fbsklm.png"
     },
     {
@@ -37,10 +37,10 @@
         "minimalist",
         ""
       ],
-      "price": 999.99,
+      "price": 999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Vaughan Basset",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/lwsy7z8sqmcflkb6bgvy.png"
     },
     {
@@ -51,10 +51,10 @@
         "modern",
         ""
       ],
-      "price": 1199.99,
+      "price": 1199,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Burrow",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/hsoedr85wv8giy5hbubz.png"
     },
     {
@@ -65,7 +65,7 @@
         "modern",
         "leather"
       ],
-      "price": 2999.99,
+      "price": 2999,
       "rating": 4,
       "stock": 98,
       "brand": "Dior",
@@ -79,10 +79,10 @@
         "minimalist",
         "wooden"
       ],
-      "price": 999.99,
+      "price": 999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "BoConcept",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/srdmtm5rrsnsc2iszrhg.png"
     },
     {
@@ -93,10 +93,10 @@
         "modern",
         "minimalist"
       ],
-      "price": 1199.99,
+      "price": 1199,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Cinna",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/ezi0zwzv27tky0rw7rrh.png"
     },
     {
@@ -107,10 +107,10 @@
         "contemporary",
         "wooden"
       ],
-      "price": 999.99,
+      "price": 999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Fendi Casa",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/uuqyghynqi5jdstrsbq6.png"
     },
     {
@@ -121,10 +121,10 @@
         "post-modern",
         "contemporary"
       ],
-      "price": 1999.99,
+      "price": 1999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Philippe Stack",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/dvutcdhti84mfsngvehy.png"
     },
     {
@@ -135,10 +135,10 @@
         "modern",
         "leather"
       ],
-      "price": 4999.99,
+      "price": 4999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Nichols and Stone",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/rlziqsues0mjom8bkffx.png"
     },
     {
@@ -149,10 +149,10 @@
         "modern",
         ""
       ],
-      "price": 2199.99,
+      "price": 2199,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Cinna",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/bvj98ggqbzb3qoif4c7x.png"
     },
     {
@@ -163,24 +163,24 @@
         "French",
         "mid-century modern"
       ],
-      "price": 1799.99,
+      "price": 1799,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Bernhardt",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/njdi9jyjvjtrwxru9qi4.png"
     },
     {
       "id": 13,
       "name": "Fritz Hanson Egg Chair",
-      "description": "The image shows a light gray, egg - shaped chair with a smooth, curved design. It has a high back, rounded seat, and is supported by a metallic swivel base with four angled legs.",
+      "description": "The Fritz Hanson Egg Chair is  a light gray, egg-shaped chair with a smooth, curved design. It has a high back, rounded seat, and is supported by a metallic swivel base with four angled legs.",
       "category": [
         "contemporary",
         ""
       ],
-      "price": 5999.99,
+      "price": 5999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Stickley",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/bfj27fztigv2jqwwpto7.png"
     },
     {
@@ -191,38 +191,38 @@
         "modern",
         "wooden"
       ],
-      "price": 999.99,
+      "price": 999,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Hooker",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/hs70xkfzlymce2awwagh.png"
     },
     {
       "id": 15,
       "name": "Bauhaus Modern Chair",
-      "description": "The image shows a modern chair with a sleek, minimalist design. It features a chrome - plated metal frame and orange fabric for the seating and backrest. The chair has angular lines and an innovative structural design, showcasing mid - century modern aesthetics.",
+      "description": "The Bauhaus Modern Chair is a chair with a sleek, minimalist design. It features a chrome - plated metal frame and orange fabric for the seating and backrest. The chair has angular lines and an innovative structural design, showcasing mid - century modern aesthetics.",
       "category": [
         "modern",
         "minimalist"
       ],
-      "price": 1899.99,
+      "price": 1899,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Bauhaus",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/tjtgakegj0xdzw675qhh.png"
     },
     {
       "id": 16,
       "name": "French Bergere Chair",
-      "description": "The image shows a classic-style armchair with a light wooden frame and dark blue upholstered seat and backrest. The chair features curved armrests, a scalloped top edge on the backrest, and elegantly curved legs. The upholstery has a subtle pattern, and the chair has a traditional, ornate design.",
+      "description": "The French Bergere Chair is a classic-style armchair with a light wooden frame and dark blue upholstered seat and backrest. The chair features curved armrests, a scalloped top edge on the backrest, and elegantly curved legs. The upholstery has a subtle pattern, and the chair has a traditional, ornate design.",
       "category": [
         "French",
         "classical"
       ],
-      "price": 2199.99,
+      "price": 2199,
       "rating": 4,
       "stock": 98,
-      "brand": "",
+      "brand": "Henredon",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/a9ychylqqau9nccmawgf.png"
     }
   ]

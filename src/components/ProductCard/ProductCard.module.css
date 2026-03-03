@@ -82,7 +82,7 @@
    font-weight: var(--font-weight-bold);
    color: hsl(210, 0%, 98%);
    background-color: hsl(196, 77%, 35%);;
-   padding: 0.5rem 1rem;
+   padding: 1em 1em;
    text-align: center;
    text-transform: uppercase;
    border-radius: 5px;

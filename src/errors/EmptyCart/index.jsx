@@ -1,7 +1,6 @@
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './EmptyCart.module.css';
 import {Link} from 'react-router-dom';
-import EmptyCartImage from '../../../src/assets/img/empty-cart.svg';
 import CartBlackPng from '../../../src/assets/img/cart-black.png';
 
 export default function EmptyCart() {
@@ -12,7 +11,7 @@ export default function EmptyCart() {
          <div className={styles.empty__cart__page}>
             <div className={styles.empty__cart__container}>
                <img className={styles.empty__cart__image} src={CartBlackPng} alt='Empty Cart Face'/>
-               <p className={styles.empty__cart__paragraph}>Empty Cart</p>
+               <p className={styles.empty__cart__paragraph}>Your Cart Is Empty</p>
                <Link to='/products' className={styles.empty__cart__button}>
                   Continue Shopping
                </Link>

@@ -3,12 +3,31 @@
    display: flex;
    height: 100vh;
    flex-direction: column;
-   align-items: center;
-   justify-content: center;
+   padding-top: 10em;
+   /*align-items: center;
+   justify-content: center;*/
 }
 
 .cart__page__title {
    font-weight: var(--font-weight-semibold);
-   font-size: 6rem;
+   text-align: center;
    color: var(--color-neutral-900);
+}
+
+
+.cart_content {
+   display: flex;
+   flex-direction: row;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+.cart_content_items {
+   /*width: 100%;*/
+   width: 58.333%;
+}
+
+.cart_content_summary {
+   /*width: 100%;*/
+   width: 41.6667%;
 }
