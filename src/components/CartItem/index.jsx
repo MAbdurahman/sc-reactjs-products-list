@@ -13,16 +13,16 @@ export default function CartItem({cartItem}) {
    const {cartItems} = cartState;
 
 
-   const handleIncreaseQuantity = (id) => {
-      cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: id});
+   const handleIncreaseQuantity = (cartItem) => {
+      cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: cartItem});
    }
 
-   const handleDecreaseQuantity = (id) => {
-      cartDispatch({type: CART_ACTIONS.DECREASE_ITEM, payload: id});
+   const handleDecreaseQuantity = (cartItem) => {
+      cartDispatch({type: CART_ACTIONS.DECREASE_ITEM, payload: cartItem});
    }
 
-   const handleRemoveFromCart = (id) => {
-      cartDispatch({type: CART_ACTIONS.REMOVE_FROM_CART, payload: id});
+   const handleRemoveFromCart = (cartItem) => {
+      cartDispatch({type: CART_ACTIONS.REMOVE_FROM_CART, payload: cartItem});
    }
 
    return (
@@ -32,7 +32,7 @@ export default function CartItem({cartItem}) {
             <div className={styles.cart_item_content}>
                <div className={styles.cart_item_top}>
                   <h5 className={styles.cart_item_name}>{cartItem.name}</h5>
-                  <DeleteOutlined className={styles.cart_item_icon}  onClick={handleRemoveFromCart} />
+                  <DeleteOutlined className={styles.cart_item_icon}  onClick={()=>handleRemoveFromCart(cartItem)} />
                </div>
                <div className={styles.cart_item_middle}>
                   <div className={styles.cart_item_middle_top}>
@@ -46,9 +46,9 @@ export default function CartItem({cartItem}) {
                   <div className={styles.cart_item_bottom}>
                      <h6 className={styles.cart_item_price}>${cartItem.price}</h6>
                      <div className={styles.cart_item_bottom_right}>
-                        <MinusOutlined style={{fontSize:'24px', color: 'black'}} onClick={handleDecreaseQuantity} />
+                        <MinusOutlined style={{fontSize:'24px', color: 'black'}} onClick={()=>handleDecreaseQuantity(cartItem)} />
                         <span className={styles.cart_item_quantity}>{cartItem.quantity}</span>
-                        <PlusOutlined style={{fontSize:'24px', color: 'black'}} onClick={handleIncreaseQuantity} />
+                        <PlusOutlined style={{fontSize:'24px', color: 'black'}} onClick={()=> handleIncreaseQuantity(cartItem)} />
                      </div>
                   </div>
                </div>

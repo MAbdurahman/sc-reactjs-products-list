@@ -40,30 +40,15 @@ export const cartReducer = (state = cartInitialState, action) => {
          };
       }
 
-      case CART_ACTIONS.REMOVE_FROM_CART:{
-         const itemToRemove = state.cartItems.find(
-            item => item.id === action.payload
-         );
-
-         return {
-            ...state,
-            cartItems: state.cartItems.filter(item => item.id !== action.payload),
-            totalItems: state.totalItems - itemToRemove.quantity,
-            totalPrice: state.totalPrice - (itemToRemove.price * itemToRemove.quantity)
-         };
-      }
-
       case CART_ACTIONS.INCREASE_ITEM: {
-         const updatedCartItems = state.cartItems.map(item => item.id === action.payload ?
-            {...item, quantity: item.quantity + 1} : item);
-
-         const itemToIncrease = state.cartItems.filter(item => item.id === action.payload);
+         const itemToIncrease = action.payload;
+         console.log(itemToIncrease);
 
          return {
             ...state,
-            cartItems: updatedCartItems,
-            totalItems: state.totalItems + itemToIncrease.quantity,
-            totalPrice: state.totalPrice + (itemToIncrease.price * itemToIncrease.quantity)
+            cartItems: [...state.cartItems.map(cartItem => cartItem.id === itemToIncrease.id ), { ...action.payload, quantity: +1 }],
+            totalItems: state.totalItems + action.payload.quantity,
+            totalPrice: state.totalPrice + (action.payload.price * action.payload.quantity)
          };
       }
 
@@ -80,9 +65,19 @@ export const cartReducer = (state = cartInitialState, action) => {
             totalPrice: (state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity))
          };
       }
+      case CART_ACTIONS.REMOVE_FROM_CART: {
+         const itemToRemove = action.payload;
+
+         return {
+            ...state,
+            cartItems: state.cartItems.filter(item => item.id !== itemToRemove.id),
+            totalItems: state.totalItems - itemToRemove.quantity,
+            totalPrice: state.totalPrice - (itemToRemove.price * itemToRemove.quantity)
+         };
+      }
 
       case CART_ACTIONS.UPDATE_QUANTITY: {
-         const itemToUpdate = state.cartItems.find(item => item.id === action.payload.id);
+         const itemToUpdate = state.cartItems.find(item => item.id === action.payload);
          const quantityDiff = action.payload.quantity - itemToUpdate.quantity;
 
          return {
