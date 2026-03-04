@@ -4,6 +4,7 @@ import styles from './CartItem.module.css';
 import {DeleteOutlined} from '@ant-design/icons';
 import {PlusOutlined} from '@ant-design/icons';
 import {MinusOutlined} from '@ant-design/icons';
+import {Minus, Plus, Trash2} from 'react-feather'
 import {CART_ACTIONS} from '../Cart/cartReducer.js';
 
 
@@ -32,7 +33,7 @@ export default function CartItem({cartItem}) {
             <div className={styles.cart_item_content}>
                <div className={styles.cart_item_top}>
                   <h5 className={styles.cart_item_name}>{cartItem.name}</h5>
-                  <DeleteOutlined className={styles.cart_item_icon}  onClick={()=>handleRemoveFromCart(cartItem)} />
+                  <Trash2 className={styles.cart_item_trash_icon}  onClick={()=>handleRemoveFromCart(cartItem)} />
                </div>
                <div className={styles.cart_item_middle}>
                   <div className={styles.cart_item_middle_top}>
@@ -46,9 +47,9 @@ export default function CartItem({cartItem}) {
                   <div className={styles.cart_item_bottom}>
                      <h6 className={styles.cart_item_price}>${cartItem.price}</h6>
                      <div className={styles.cart_item_bottom_right}>
-                        <MinusOutlined style={{fontSize:'24px', color: 'black'}} onClick={()=>handleDecreaseQuantity(cartItem)} />
+                        <Minus className={styles.cart_item_icon} onClick={()=>handleDecreaseQuantity(cartItem)} />
                         <span className={styles.cart_item_quantity}>{cartItem.quantity}</span>
-                        <PlusOutlined style={{fontSize:'24px', color: 'black'}} onClick={()=> handleIncreaseQuantity(cartItem)} />
+                        <Plus className={styles.cart_item_icon} onClick={()=> handleIncreaseQuantity(cartItem)} />
                      </div>
                   </div>
                </div>

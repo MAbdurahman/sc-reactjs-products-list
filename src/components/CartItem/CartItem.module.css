@@ -66,13 +66,28 @@
       line-height: 2rem;
    }
 }
+
+.cart_item_trash_icon {
+   cursor: pointer;
+   font-size: 1.5rem;
+   line-height: 2rem;
+   color: var(--color-semantic-alert-400);
+   transition: color 0.3s ease;
+}
+.cart_item_trash_icon:hover {
+   color: var(--color-semantic-alert-100);
+}
 .cart_item_icon {
    cursor: pointer;
    font-size: 1.5rem;
    line-height: 2rem;
-   color: #dc2626;
+   color: var(--color-neutral-800);
 
 }
+.cart_item_icon:hover {
+   color: var(--color-neutral-500);
+}
+
 
 .cart_item_middle {
 

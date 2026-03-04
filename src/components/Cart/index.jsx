@@ -11,7 +11,7 @@ export default function Cart() {
    const {cartState, cartDispatch} = useCart();
    const {cartItems} = cartState;
 
-   const handleIncreaseQuantity = (id) => {
+   /*const handleIncreaseQuantity = (id) => {
       cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: id});
    }
 
@@ -25,7 +25,7 @@ export default function Cart() {
 
    const handleClearCart = () => {
       cartDispatch({type: CART_ACTIONS.CLEAR_CART});
-   }
+   }*/
 
    if (cartState.cartItems.length === 0) {
       return <EmptyCart />;
