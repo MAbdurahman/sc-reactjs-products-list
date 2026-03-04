@@ -29,7 +29,7 @@
 .cart_item_image {
    width: 9rem;
    border-radius: 5px;
-   background-color: var(--color-augmented-000);
+   background-color: var(--color-neutral-200);
    padding: 1rem;
 }
 @media (min-width: 640px) {

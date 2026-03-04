@@ -34,7 +34,7 @@ export const cartReducer = (state = cartInitialState, action) => {
          // Add new item with quantity 1
          return {
             ...state,
-            cartItems: [...state.cartItems, { ...action.payload, quantity: 1 }],
+            cartItems: [...state.cartItems, {...action.payload, quantity: 1}],
             totalItems: state.totalItems + 1,
             totalPrice: state.totalPrice + action.payload.price
          };
@@ -42,14 +42,21 @@ export const cartReducer = (state = cartInitialState, action) => {
 
       case CART_ACTIONS.INCREASE_ITEM: {
          const itemToIncrease = action.payload;
-         console.log(itemToIncrease);
 
-         return {
-            ...state,
-            cartItems: [...state.cartItems.map(cartItem => cartItem.id === itemToIncrease.id ), { ...action.payload, quantity: +1 }],
-            totalItems: state.totalItems + action.payload.quantity,
-            totalPrice: state.totalPrice + (action.payload.price * action.payload.quantity)
-         };
+         const existingItemIndex = state.cartItems.findIndex(item => item.id === action.payload.id);
+
+         if (existingItemIndex >= 0) {
+            const updatedCartItems = [...state.cartItems];
+            updatedCartItems[existingItemIndex].quantity += 1;
+
+            return {
+               ...state,
+               cartItems: updatedCartItems,
+               totalItems: state.totalItems + 1,
+               totalPrice: state.totalPrice + (itemToIncrease.price * itemToIncrease.quantity)
+            }
+         }
+         return state;
       }
 
       case CART_ACTIONS.DECREASE_ITEM: {
