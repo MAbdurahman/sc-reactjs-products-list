@@ -22,7 +22,7 @@ export const cartReducer = (state = cartInitialState, action) => {
             // Increase quantity if item already exists
             return {
                ...state,
-               items: state.cartItems.map(item =>
+               cartItems: state.cartItems.map(item =>
                   item.id === action.payload.id
                      ? {...item, quantity: item.quantity + 1}
                      : item
