@@ -8,7 +8,7 @@ import CartSummary from '../CartSummary/index.jsx';
 
 
 export default function Cart() {
-   const {cartState, cartDispatch} = useCart();
+   const {cartState} = useCart();
    const {cartItems} = cartState;
 
    /*const handleIncreaseQuantity = (id) => {

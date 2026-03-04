@@ -60,18 +60,23 @@ export const cartReducer = (state = cartInitialState, action) => {
       }
 
       case CART_ACTIONS.DECREASE_ITEM: {
-         const updatedCartItems = state.cartItems.map(item => item.id === action.payload ?
-            {...item, quantity: item.quantity - 1} : item);
+         const itemToDecrease = action.payload;
+         const existingItemIndex = state.cartItems.findIndex(item => item.id === action.payload.id);
 
-         const itemToDecrease = state.cartItems.filter(item => item.id === action.payload);
+         if (existingItemIndex >= 0) {
+            const updatedCartItems = [...state.cartItems];
+            updatedCartItems[existingItemIndex].quantity -= 1;
 
-         return {
-            ...state,
-            cartItems: updatedCartItems,
-            totalItems: state.totalItems - itemToDecrease.quantity,
-            totalPrice: (state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity))
-         };
+            return {
+               ...state,
+               cartItems: updatedCartItems,
+               totalItems: state.totalItems - 1,
+               totalPrice: state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity)
+            }
+         }
+         return state;
       }
+
       case CART_ACTIONS.REMOVE_FROM_CART: {
          const itemToRemove = action.payload;
 
