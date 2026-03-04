@@ -85,7 +85,7 @@
    align-items: center;
    justify-content: center;
    gap: 0.5rem;
-   transition: color, background-color, border-color, text-decoration-color, fill, stroke;
+   transition: color, background-color, border-color, 0.333s ease-in-out;
    cursor: pointer;
 }
 .cart_summary_button:hover,
