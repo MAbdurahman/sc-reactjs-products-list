@@ -28,7 +28,7 @@
    margin-bottom: 0.5rem;
    font-size: 0.875rem;
    line-height: 1.25rem;
-   border-bottom: 2px solid #d4d4d4;
+   border-bottom: 2px solid rgba(29, 43, 48, 0.1);
 }
 
 .cart_summary_information {

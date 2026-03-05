@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './CartSummary.module.css';
 import useCart from '../../assets/hooks/useCart.jsx';
+import {addCommasToNumber, formatWithDecimals} from '../../assets/utils/functionsUtils.js';
 
 export default function CartSummary() {
    const {cartState} = useCart();
@@ -8,14 +9,24 @@ export default function CartSummary() {
 
    const totalItems = cartItems.reduce((sum, cartItem) => sum + cartItem.quantity, 0);
 
-   const subtotal = cartItems.reduce(
+   let subtotal = cartItems.reduce(
       (sum, cartItem) => sum + cartItem.price * cartItem.quantity,
       0
    );
 
-   const discount = (subtotal * 0.2).toFixed(2);
-   const deliveryFee = 75;
-   const total = (subtotal - discount + deliveryFee).toFixed(2);
+   let discount = (subtotal * 0.2);
+   let deliveryFee = 75;
+   let total = (subtotal - discount + deliveryFee);
+
+   deliveryFee = formatWithDecimals(deliveryFee);
+   discount = formatWithDecimals(discount);
+   discount = addCommasToNumber(discount);
+
+   subtotal = formatWithDecimals(subtotal);
+   subtotal = addCommasToNumber(subtotal);
+
+   total = formatWithDecimals(total);
+   total = addCommasToNumber(total);
 
    return (
       <section className={styles.cart_summary}>
