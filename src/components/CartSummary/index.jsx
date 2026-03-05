@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './CartSummary.module.css';
 import useCart from '../../assets/hooks/useCart.jsx';
 
-
 export default function CartSummary() {
    const {cartState} = useCart();
    const {cartItems} = cartState;
@@ -17,6 +16,7 @@ export default function CartSummary() {
    const discount = (subtotal * 0.2).toFixed(2);
    const deliveryFee = 75;
    const total = (subtotal - discount + deliveryFee).toFixed(2);
+
    return (
       <section className={styles.cart_summary}>
          <h3 className={styles.cart_summary_title}>Order Summary</h3>

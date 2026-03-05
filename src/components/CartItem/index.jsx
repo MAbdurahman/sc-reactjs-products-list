@@ -10,9 +10,7 @@ import {CART_ACTIONS} from '../Cart/cartReducer.js';
 
 export default function CartItem({cartItem}) {
 
-   const {cartState, cartDispatch} = useCart();
-   const {cartItems} = cartState;
-
+   const {cartDispatch} = useCart();
 
    const handleIncreaseQuantity = (cartItem) => {
       cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: cartItem});
@@ -37,7 +35,6 @@ export default function CartItem({cartItem}) {
                </div>
                <div className={styles.cart_item_middle}>
                   <div className={styles.cart_item_middle_top}>
-                     {/*<span className={styles.cart_item_desc_label}>description:</span>*/}
                      <span className={styles.cart_item_description}>{cartItem.description}</span>
                   </div>
                   <div className={styles.cart_item_middle_bottom}>

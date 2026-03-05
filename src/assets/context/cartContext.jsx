@@ -10,7 +10,6 @@ export default function CartProvider({ children }) {
    const [cartState, cartDispatch] = useReducer(cartReducer, cartInitialState);
    const [products, setProducts] = useState(data.products);
 
-
    const isInCart = (product) => {
       return cartState.cartItems.find(cartItem => cartItem.id === product.id);
    };

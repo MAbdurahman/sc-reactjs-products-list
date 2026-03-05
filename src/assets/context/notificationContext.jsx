@@ -43,7 +43,7 @@ export default function NotificationProvider({children}) {
 
          timeoutID2 = setTimeout(() => {
             setNotification('');
-/*            setExitToLeft(false);*/
+           // setExitToLeft(false);
             setMoveBackToRight(false);
          }, 1500);
 
