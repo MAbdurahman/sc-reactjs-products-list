@@ -3,25 +3,17 @@ import styles from './ProductCard.module.css';
 import StarRating from '../StarRating/index.jsx';
 import {CartContext} from '../../assets/context/cartContext.jsx';
 import {CART_ACTIONS} from '../Cart/cartReducer.js';
-import useProducts from '../../assets/hooks/useProducts.jsx';
-import {PRODUCT_ACTIONS} from '../../pages/Products/productsReducer.js';
 import { Link } from "react-router-dom";
 
 
 export default function ProductCard({product}) {
    const {cartDispatch} = useContext(CartContext)
-   const {productsDispatch} = useProducts();
-
-   const handleGetSingleProduct = (id) => {
-      productsDispatch({type: PRODUCT_ACTIONS.GET_SINGLE_PRODUCT, payload: id});
-   }
 
    const handleAddToCart = () => {
       cartDispatch({type: CART_ACTIONS.ADD_TO_CART, payload: product});
    }
 
    return (
-
       <div className={styles.card}>
          <Link to={`/products/${product.id}`}>
             <img src={product.image} className={styles.card_image} alt={product.name}
@@ -41,6 +33,5 @@ export default function ProductCard({product}) {
          </div>
          </div>
       </div>
-
    );
 }
