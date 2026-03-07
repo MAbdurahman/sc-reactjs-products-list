@@ -1,8 +1,97 @@
 
 .product_details_container {
-
-
+   width: 100%;
+   margin-top: 12em;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 16px;
+   padding-right: 16px;
 }
+
+@media (min-width: 576px) {
+   .product_details_container {
+      max-width: 544px;
+   }
+}
+
+@media (min-width: 768px) {
+   .product_details_container {
+      max-width: 720px;
+   }
+}
+
+@media (min-width: 992px) {
+   .product_details_container {
+      max-width: 960px;
+   }
+}
+
+@media (min-width: 1200px) {
+   .product_details_container {
+      max-width: 1144px;
+   }
+}
+
+@media (min-width: 1400px) {
+   .product_details_container {
+      max-width: 1320px;
+   }
+}
+
+.product_details_row {
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap;
+}
+.product_details_col_2 {
+   width: 16.33333333333333%;
+}
+.product_details_col_3 {
+   width: 25%;
+}
+.product_details_col_6 {
+   width: 50%;
+}
+.product_details_col_9 {
+   width: 75%;
+}
+.product_details_margin_top_100 {
+   margin-top: 100px;
+}
+
+@media (max-width: 765px) {
+   .product_details_col_2 {
+      width: 100%;
+      text-align: center;
+      padding: 4px;
+   }
+   .product_details_col_3 {
+      width: 50%;
+   }
+   .product_details_col_6 {
+      width: 100%;
+   }
+   .product_details_col_9 {
+      width: 100%;
+   }
+}
+
+@media (max-width: 400px) {
+   .product_details_col_2 {
+      width: 100%;
+      text-align: center;
+   }
+   .product_details_col_3 {
+      width: 100%;
+   }
+   .product_details_col_6 {
+      width: 100%;
+   }
+}
+
+
+
+
 .product_details_page {
    padding-top: 5em;
    display: flex;
@@ -15,6 +104,7 @@
 .product_details_left {
 
 }
+
 /*.product_details_flex {
    display: flex;
    flex-direction: column;
@@ -52,22 +142,29 @@
    align-items: center;
 
 }
+
 .product_details_rating span {
 
 }
 
-.product_details_description {}
+.product_details_description {
+}
 
-.product_details_price {}
+.product_details_price {
+}
 
-.product_details_right_bottom {}
+.product_details_right_bottom {
+}
 
-.product_details_right_bottom_right {}
+.product_details_right_bottom_right {
+}
 
 .product_details_icon {
 
 }
 
-.product_details_quantity {}
+.product_details_quantity {
+}
 
-.product_details_button {}
+.product_details_button {
+}

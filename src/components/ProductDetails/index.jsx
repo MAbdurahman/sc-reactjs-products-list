@@ -19,6 +19,7 @@ export default function ProductDetails() {
    const {cartState, cartDispatch, isInCart} = useCart();
    const {cartItems} = cartState;
    console.log(productsState)
+   let productPrice;
 
    console.log('params id - ', id );
    console.log('cartItems', cartItems)
@@ -56,8 +57,39 @@ export default function ProductDetails() {
 
    return (
       singleProduct && (
+         <section className={styles.product_details_container}>
+            <div className={styles.product_details_row}>
+               <div className={styles.product_details_col_6}>
+                  <figure className={styles.product_details_image}>
+                     <img src={singleProduct.image} alt={singleProduct.name} />
+                  </figure>
+               </div>
+               <div className={styles.product_details_col_6}>
+                  <h4 className={styles.product_details_name}>{singleProduct.name}</h4>
+                  <div className={styles.product_details_rating}>
+                  <StarRating />
+                     <span className={styles.product_details_rating}>`({singleProduct.reviews} reviews)`</span>
+                  </div>
+                  <p className={styles.product_details_description}>{singleProduct.description}</p>
+                  <h5 className={styles.product_details_price}>${singleProduct.price}</h5>
+                  <div className={styles.product_details_bottom}>
+                     <div className={styles.product_details_buttons}>
+                        {
+                           isInCart(singleProduct) && (
+                              <div className={styles.product_details__bottom_right}>
+                                 <Minus className={styles.product_details_icon} />
+                                 <span className={styles.product_details_quantity}>{singleProduct.quantity}</span>
+                                 <Plus className={styles.product_details_icon} />
+                              </div>
+                           )
+                        }
+                        <button type='button' className={styles.product_details_button}>Add to Cart</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
 
-      <h2 className={styles.product_details_page}>{singleProduct.name}</h2>
+         </section>
       )
       /*<section className={styles.product_details_container}>
          <div className={styles.product_details_page}>
