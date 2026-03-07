@@ -16,7 +16,7 @@ import {
 export default function ProductDetails() {
    const {id} = useParams();
    const {productsState, productsDispatch} = useProducts();
-   const {cartState, cartDispatch, isInCart, getProduct} = useCart();
+   const {cartState, cartDispatch, isInCart, getProductInCart} = useCart();
    const {cartItems} = cartState;
    console.log(productsState)
    let productPrice;
@@ -38,15 +38,17 @@ export default function ProductDetails() {
    const {singleProduct} = productsState;
    console.log(singleProduct);
 
-   /*const handleIncreaseQuantity = (singleProduct) => {
+   const handleIncreaseQuantity = (singleProduct) => {
       cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: singleProduct});
    }
 
    const handleDecreaseQuantity = (singleProduct) => {
       cartDispatch({type: CART_ACTIONS.DECREASE_ITEM, payload: singleProduct});
-   }*/
+   }
 
-
+   const handleAddToCart = () => {
+      cartDispatch({type: CART_ACTIONS.ADD_TO_CART, payload: singleProduct});
+   }
 
 
    /*let productPrice = singleProduct.price;
@@ -54,7 +56,7 @@ export default function ProductDetails() {
    productPrice = addCommasToNumber(productPrice);*/
 
    console.log('isInCart', isInCart(singleProduct));
-   console.log('getProduct', getProduct(id));
+   console.log('getProductInCart', getProductInCart(id));
 
    return (
       singleProduct && (
@@ -65,26 +67,28 @@ export default function ProductDetails() {
                      <img src={singleProduct.image} alt={singleProduct.name} />
                   </figure>
                </div>
-               <div className={styles.product_details_col_6}>
-                  <h4 className={styles.product_details_name}>{singleProduct.name}</h4>
+               <div className={styles.product_details_col_6} >
+                  <div className={styles.product_details_right_top}>
+                  <h3 className={styles.product_details_name}>{singleProduct.name}</h3>
                   <div className={styles.product_details_rating}>
                   <StarRating />
-                     <span className={styles.product_details_rating}>`({singleProduct.reviews} reviews)`</span>
+                     <span className={styles.product_details_rating}>({singleProduct.reviews} reviews)</span>
                   </div>
                   <p className={styles.product_details_description}>{singleProduct.description}</p>
-                  <h5 className={styles.product_details_price}>${singleProduct.price}</h5>
-                  <div className={styles.product_details_bottom}>
+                  <h4 className={styles.product_details_price}>${singleProduct.price.toLocaleString()}</h4>
+                  </div>
+                  <div className={styles.product_details_right_bottom}>
                      <div className={styles.product_details_buttons}>
                         {
                            isInCart(singleProduct) && (
-                              <div className={styles.product_details__bottom_right}>
-                                 <Minus className={styles.product_details_icon} />
-                                 <span className={styles.product_details_quantity}>{getProduct(id).quantity}</span>
-                                 <Plus className={styles.product_details_icon} />
+                              <div className={styles.product_details__right_bottom_left}>
+                                 <Minus className={styles.product_details_icon} onClick={()=>handleDecreaseQuantity(singleProduct)} />
+                                 <span className={styles.product_details_quantity}>{getProductInCart(id).quantity}</span>
+                                 <Plus className={styles.product_details_icon} onClick={()=> handleIncreaseQuantity(singleProduct)} />
                               </div>
                            )
                         }
-                        <button type='button' className={styles.product_details_button}>Add to Cart</button>
+                        <button type='button' className={styles.product_details_button} onClick={handleAddToCart} >Add to Cart</button>
                      </div>
                   </div>
                </div>

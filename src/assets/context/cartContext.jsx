@@ -11,16 +11,16 @@ export default function CartProvider({children}) {
 
 
    const isInCart = (product) => {
-      return cartState.cartItems.some(cartItem => cartItem.id === product.id);
+      return cartState.cartItems.some(cartItem => cartItem.id === parseInt(product.id));
    };
 
-   const getProduct = (id) => {
+   const getProductInCart = (id) => {
       return cartState.cartItems.find(cartItem => cartItem.id === parseInt(id));
    }
 
    return (
       <CartContext.Provider
-         value={{cartState, cartDispatch, products, isInCart, getProduct, setProducts}}>
+         value={{cartState, cartDispatch, products, isInCart, getProductInCart, setProducts}}>
          {children}
       </CartContext.Provider>
    )

@@ -23,7 +23,7 @@ export default function ProductCard({product}) {
          <div className={styles.card_body}>
             <h5 className={styles.card_title}>{product.name}</h5>
             <p className={styles.card_description}>{product.description}</p>
-            <h6 className={styles.card_price}>${product.price}</h6>
+            <h6 className={styles.card_price}>${product.price.toLocaleString()}</h6>
             <StarRating/>
          </div>
          <div className={styles.card_footer}>
