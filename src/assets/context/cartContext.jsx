@@ -14,9 +14,13 @@ export default function CartProvider({children}) {
       return cartState.cartItems.some(cartItem => cartItem.id === product.id);
    };
 
+   const getProduct = (id) => {
+      return cartState.cartItems.find(cartItem => cartItem.id === parseInt(id));
+   }
+
    return (
       <CartContext.Provider
-         value={{cartState, cartDispatch, products, isInCart, setProducts}}>
+         value={{cartState, cartDispatch, products, isInCart, getProduct, setProducts}}>
          {children}
       </CartContext.Provider>
    )

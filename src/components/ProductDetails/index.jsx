@@ -16,7 +16,7 @@ import {
 export default function ProductDetails() {
    const {id} = useParams();
    const {productsState, productsDispatch} = useProducts();
-   const {cartState, cartDispatch, isInCart} = useCart();
+   const {cartState, cartDispatch, isInCart, getProduct} = useCart();
    const {cartItems} = cartState;
    console.log(productsState)
    let productPrice;
@@ -54,6 +54,7 @@ export default function ProductDetails() {
    productPrice = addCommasToNumber(productPrice);*/
 
    console.log('isInCart', isInCart(singleProduct));
+   console.log('getProduct', getProduct(id));
 
    return (
       singleProduct && (
@@ -78,7 +79,7 @@ export default function ProductDetails() {
                            isInCart(singleProduct) && (
                               <div className={styles.product_details__bottom_right}>
                                  <Minus className={styles.product_details_icon} />
-                                 <span className={styles.product_details_quantity}>{singleProduct.quantity}</span>
+                                 <span className={styles.product_details_quantity}>{getProduct(id).quantity}</span>
                                  <Plus className={styles.product_details_icon} />
                               </div>
                            )
