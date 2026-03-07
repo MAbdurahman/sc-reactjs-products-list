@@ -7,11 +7,11 @@ export const CART_ACTIONS = {
    CLEAR_CART: 'CLEAR_CART'
 
 }
- export const cartInitialState = {
+export const cartInitialState = {
    cartItems: [],
-    totalItems: 0,
-    totalPrice: 0
- }
+   totalItems: 0,
+   totalPrice: 0
+}
 
 export const cartReducer = (state = cartInitialState, action) => {
    const {type} = action;
@@ -22,10 +22,14 @@ export const cartReducer = (state = cartInitialState, action) => {
             // Increase quantity if item already exists
             return {
                ...state,
-               cartItems: state.cartItems.map(item =>
-                  item.id === action.payload.id
-                     ? {...item, quantity: item.quantity + 1}
-                     : item
+               cartItems: state.cartItems.map(item => {
+                     return item.id === action.payload.id
+                        ? {
+                           ...item,
+                           quantity: item.quantity + 1
+                        }
+                        : item;
+                  }
                ),
                totalItems: state.totalItems + 1,
                totalPrice: state.totalPrice + action.payload.price
@@ -37,6 +41,7 @@ export const cartReducer = (state = cartInitialState, action) => {
             cartItems: [...state.cartItems, {...action.payload, quantity: 1}],
             totalItems: state.totalItems + 1,
             totalPrice: state.totalPrice + action.payload.price
+
          };
       }
 
@@ -64,13 +69,17 @@ export const cartReducer = (state = cartInitialState, action) => {
 
          return {
             ...state,
-            cartItems: state.cartItems.map(item => item.id === itemToDecrease.id
-               ? {...item, quantity: item.quantity - 1}
-               : item )
+            cartItems: state.cartItems.map(item => {
+               return item.id === itemToDecrease.id
+                  ? {
+                     ...item,
+                     quantity: item.quantity - 1
+                  }
+                  : item;
+            })
                .filter(item => item.quantity > 0),
             totalItems: state.totalItems - 1,
             totalPrice: state.totalPrice - (itemToDecrease.price * itemToDecrease.quantity)
-
          };
       }
 
@@ -82,6 +91,7 @@ export const cartReducer = (state = cartInitialState, action) => {
             cartItems: state.cartItems.filter(item => item.id !== itemToRemove.id),
             totalItems: state.totalItems - itemToRemove.quantity,
             totalPrice: state.totalPrice - (itemToRemove.price * itemToRemove.quantity)
+
          };
       }
 
@@ -91,10 +101,14 @@ export const cartReducer = (state = cartInitialState, action) => {
 
          return {
             ...state,
-            cartItems: state.cartItems.map(item =>
-               item.id === action.payload.id
-                  ? { ...item, quantity: action.payload.quantity }
-                  : item
+            cartItems: state.cartItems.map(item => {
+                  return item.id === action.payload.id
+                     ? {
+                        ...item,
+                        quantity: action.payload.quantity
+                     }
+                     : item;
+               }
             ),
             totalItems: state.totalItems + quantityDiff,
             totalPrice: state.totalPrice + (itemToUpdate.price * quantityDiff)

@@ -11,6 +11,7 @@
       ],
       "price": 999,
       "rating": 4,
+      "reviews": 136,
       "stock": 98,
       "brand": "Dior",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/tmrhkbyjsg4enmyutwe3.png"
@@ -25,6 +26,7 @@
       ],
       "price": 899,
       "rating": 4,
+      "reviews": 53,
       "stock": 98,
       "brand": "Bernhardt",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/oafqcgtak9upe6fbsklm.png"
@@ -39,6 +41,7 @@
       ],
       "price": 999,
       "rating": 4,
+      "reviews": 73,
       "stock": 98,
       "brand": "Vaughan Basset",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/lwsy7z8sqmcflkb6bgvy.png"
@@ -53,6 +56,7 @@
       ],
       "price": 1199,
       "rating": 4,
+      "reviews": 33,
       "stock": 98,
       "brand": "Burrow",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/hsoedr85wv8giy5hbubz.png"
@@ -67,6 +71,7 @@
       ],
       "price": 2999,
       "rating": 4,
+      "reviews": 227,
       "stock": 98,
       "brand": "Dior",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/f7pxxfparaa1ffusdrvg.png"
@@ -81,6 +86,7 @@
       ],
       "price": 999,
       "rating": 4,
+      "reviews": 84,
       "stock": 98,
       "brand": "BoConcept",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059038/chairs/srdmtm5rrsnsc2iszrhg.png"
@@ -95,6 +101,7 @@
       ],
       "price": 1199,
       "rating": 4,
+      "reviews": 81,
       "stock": 98,
       "brand": "Cinna",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/ezi0zwzv27tky0rw7rrh.png"
@@ -109,6 +116,7 @@
       ],
       "price": 999,
       "rating": 4,
+      "reviews": 65,
       "stock": 98,
       "brand": "Fendi Casa",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/uuqyghynqi5jdstrsbq6.png"
@@ -123,6 +131,7 @@
       ],
       "price": 1999,
       "rating": 4,
+      "reviews": 224,
       "stock": 98,
       "brand": "Philippe Stack",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/dvutcdhti84mfsngvehy.png"
@@ -137,6 +146,7 @@
       ],
       "price": 4999,
       "rating": 4,
+      "reviews": 49,
       "stock": 98,
       "brand": "Nichols and Stone",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/rlziqsues0mjom8bkffx.png"
@@ -151,6 +161,7 @@
       ],
       "price": 2199,
       "rating": 4,
+      "reviews": 178,
       "stock": 98,
       "brand": "Cinna",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059039/chairs/bvj98ggqbzb3qoif4c7x.png"
@@ -165,6 +176,7 @@
       ],
       "price": 1799,
       "rating": 4,
+      "reviews": 328,
       "stock": 98,
       "brand": "Bernhardt",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/njdi9jyjvjtrwxru9qi4.png"
@@ -179,6 +191,7 @@
       ],
       "price": 5999,
       "rating": 4,
+      "reviews": 134,
       "stock": 98,
       "brand": "Stickley",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059046/chairs/bfj27fztigv2jqwwpto7.png"
@@ -193,6 +206,7 @@
       ],
       "price": 999,
       "rating": 4,
+      "reviews": 218,
       "stock": 98,
       "brand": "Hooker",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/hs70xkfzlymce2awwagh.png"
@@ -207,6 +221,7 @@
       ],
       "price": 1899,
       "rating": 4,
+      "reviews": 159,
       "stock": 98,
       "brand": "Bauhaus",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/tjtgakegj0xdzw675qhh.png"
@@ -221,6 +236,7 @@
       ],
       "price": 2199,
       "rating": 4,
+      "reviews": 238,
       "stock": 98,
       "brand": "Henredon",
       "image": "https://res.cloudinary.com/mdbdrrhm/image/upload/v1772059047/chairs/a9ychylqqau9nccmawgf.png"

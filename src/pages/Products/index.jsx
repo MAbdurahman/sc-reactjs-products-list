@@ -1,11 +1,12 @@
 import React from 'react';
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './Products.module.css';
-import useCart from '../../assets/hooks/useCart.jsx';
 import ProductCard from '../../components/ProductCard/index.jsx';
+import useProducts from '../../assets/hooks/useProducts.jsx';
 
 export default function Products() {
-   const {products} = useCart();
+   const {productsState} = useProducts();
+   const {products} = productsState;
 
    return (
       <div className='utils-container'>

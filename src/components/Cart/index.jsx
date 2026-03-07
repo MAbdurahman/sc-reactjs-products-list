@@ -11,22 +11,6 @@ export default function Cart() {
    const {cartState} = useCart();
    const {cartItems} = cartState;
 
-   /*const handleIncreaseQuantity = (id) => {
-      cartDispatch({type: CART_ACTIONS.INCREASE_ITEM, payload: id});
-   }
-
-   const handleDecreaseQuantity = (id) => {
-      cartDispatch({type: CART_ACTIONS.DECREASE_ITEM, payload: id});
-   }
-
-   const handleRemoveFromCart = (id) => {
-      cartDispatch({type: CART_ACTIONS.REMOVE_FROM_CART, payload: id});
-   }
-
-   const handleClearCart = () => {
-      cartDispatch({type: CART_ACTIONS.CLEAR_CART});
-   }*/
-
    if (cartState.cartItems.length === 0) {
       return <EmptyCart />;
    }

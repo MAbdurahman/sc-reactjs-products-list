@@ -13,6 +13,7 @@ import About from '../pages/About/index.jsx';
 import Contact from '../pages/Contact/index.jsx';
 import Home from '../pages/Home/index.jsx';
 import Products from '../pages/Products/index.jsx';
+import ProductDetails from '../components/ProductDetails/index.jsx';
 import Cart from '../components/Cart/index.jsx';
 import Preloader from '../components/Preloader/index.jsx';
 
@@ -39,6 +40,7 @@ export default function App() {
                      <Route path='/' element={<Home/>}/>
                      <Route path='/about' element={<About/>}/>
                      <Route path='/products' element={<Products/>}/>
+                     <Route path='/products/:id' element={<ProductDetails/>}/>
                      <Route path='/contact' element={<Contact/>}/>
                      <Route path='/cart' element={<Cart/>}/>
                      <Route path='/sign-in' element={<SignIn/>}/>

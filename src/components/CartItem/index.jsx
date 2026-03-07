@@ -1,10 +1,7 @@
 import React, {Fragment} from 'react';
 import useCart from '../../assets/hooks/useCart.jsx';
 import styles from './CartItem.module.css';
-import {DeleteOutlined} from '@ant-design/icons';
-import {PlusOutlined} from '@ant-design/icons';
-import {MinusOutlined} from '@ant-design/icons';
-import {Minus, Plus, Trash2} from 'react-feather'
+import {Minus, Plus, Trash2} from 'react-feather';
 import {CART_ACTIONS} from '../Cart/cartReducer.js';
 
 

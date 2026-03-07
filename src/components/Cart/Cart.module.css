@@ -4,6 +4,7 @@
    height: 100vh;
    flex-direction: column;
    padding-top: 10em;
+   padding-bottom: 10em;
    /*align-items: center;
    justify-content: center;*/
 }
