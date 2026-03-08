@@ -51,11 +51,11 @@ export default function PasswordStrengthMeter({password}) {
    const strength = getStrength(password);
 
    const getColor = (strength) => {
-      if (strength === 0) return 'bg-semantic-a-200';
-      if (strength === 1) return 'bg-semantic-a-400';
-      if (strength === 2) return 'bg-semantic-w-400';
-      if (strength === 3) return 'bg-semantic-s-400';
-      return 'bg-semantic-s-400';
+      if (strength === 0) return 'bg-semantic-pw-a-200';
+      if (strength === 1) return 'bg-semantic-pw-a-400';
+      if (strength === 2) return 'bg-semantic-pw-w-400';
+      if (strength === 3) return 'bg-semantic-pw-s-400';
+      return 'bg-semantic-pw-s-400';
    };
 
    const getStrengthText = (strength) => {

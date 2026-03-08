@@ -49,7 +49,7 @@ export default function App() {
                      <Route path='/no-results' element={<NoResults/>}/>
                      <Route path='*' element={<NotFound/>}/>
                   </Routes>
-                  <ToastContainer
+{/*                  <ToastContainer
                      position='bottom-right'
                      autoClose={5000}
                      hideProgressBar={false}
@@ -63,7 +63,7 @@ export default function App() {
                      transition={Slide}
                      style={{zIndex: 10000}}
 
-                  />
+                  />*/}
                </div>)
          }
       </div>

@@ -8,12 +8,13 @@ import PasswordStrengthMeter from '../../components/PasswordStrengthMeter/index.
 import {ACTIONS, initialState, signUpReducer} from './signUpReducer.js';
 import {useNavigate, Link} from 'react-router-dom';
 import {toast} from 'react-toastify';
-
+import useNotification from '../../assets/hooks/useNotification.jsx';
 
 export default function SignUp() {
    const [isShowing, setIsShowing] = useState(false);
    const [state, dispatch] = useReducer(signUpReducer, initialState);
    const navigate = useNavigate();
+   const {updateNotification} = useNotification();
 
 
    const togglePasswordIsShowing = () => {
@@ -26,11 +27,10 @@ export default function SignUp() {
       const {isValid, error} = validatedNameEmailAndPassword(state.fullname.value, state.email.value, state.password.value);
       try {
          if (!isValid) {
-            toast.error(error);
-            return;
+            return updateNotification("error", error);
          }
          const firstName = getFirstName(state.fullname.value);
-         toast.success(`${firstName} successfully signed up!`);
+         updateNotification('success', `${firstName} successfully signed up!`);
 
          setTimeout(()=> {
             dispatch({type: ACTIONS.RESET_FORM});

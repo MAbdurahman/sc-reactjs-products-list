@@ -39,7 +39,7 @@ export default function CartItem({cartItem}) {
                      <span className={styles.cart_item_description}>{cartItem.brand}</span>
                   </div>
                   <div className={styles.cart_item_bottom}>
-                     <h6 className={styles.cart_item_price}>${cartItem.price}</h6>
+                     <h6 className={styles.cart_item_price}>${cartItem.price.toLocaleString()}</h6>
                      <div className={styles.cart_item_bottom_right}>
                         <Minus className={styles.cart_item_icon} onClick={()=>handleDecreaseQuantity(cartItem)} />
                         <span className={styles.cart_item_quantity}>{cartItem.quantity}</span>

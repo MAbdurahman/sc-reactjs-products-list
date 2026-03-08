@@ -292,7 +292,7 @@ a:hover {
 /*===============================================================
           utility classes
 ==================================================================*/
-.bg-semantic-a-200 {
+/*.bg-semantic-a-200 {
   background-color: hsl(0, 96%, 48%);
 }
 
@@ -310,7 +310,7 @@ a:hover {
 
 .bg-semantic-w-400 {
   background-color: hsl(48, 96%, 50%);
-}
+}*/
 
 
 
@@ -399,27 +399,23 @@ a:hover {
 
 
 .utils-notification-container {
-  max-width: 320px;
+  max-width: 360px;
   min-width: 320px;
 
-}
-
-.utils-radius-shadow {
-  border-radius: 4px;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px rgb(0,0,0,0.1), 0 2px 4px -2px rgb(0,0,0,0.1);
 }
 
 .utils-notification-paragraph {
-  padding: 8px;
+  padding: 8px 16px;
   font-weight: 600;
-  font-size: calc(10px + 2vmin);
+  /*font-size: calc(10px + 2vmin);*/
+  font-size: 16px;
   color: rgb(249,250,251);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+
 }
 
-.utils-notify {
-  min-width: 320px;
-  max-width: 320px;
-}
 .utils-center-vertically {
   position: relative;
   top: 50%;
@@ -434,23 +430,49 @@ a:hover {
 
 .bg-semantic-a-200 {
   background-color: hsl(0, 96%, 48%);
+  border-left: 8px solid hsl(0, 94%, 21%);
+}
+
+.bg-semantic-pw-a-200 {
+  background-color: hsl(0, 96%, 48%);
 }
 
 .bg-semantic-a-400 {
+  background-color: hsl(0, 96%, 33%);
+  border-left: 8px solid hsl(0, 94%, 21%);
+}
+
+.bg-semantic-pw-a-400{
   background-color: hsl(0, 96%, 33%);
 }
 
 .bg-semantic-i-400 {
   background-color: hsl(215, 96%, 33%);
+  border-left: 8px solid hsl(214, 94%, 21%);
+}
+
+.bg-semantic-pw-i-400 {
+  background-color: hsl(215, 96%, 33%);
 }
 
 .bg-semantic-s-400 {
+  background-color: hsl(100, 96%, 33%);
+  border-left: 8px solid hsl(115, 94%, 19%);
+}
+
+.bg-semantic-pw-s-400 {
   background-color: hsl(100, 96%, 33%);
 }
 
 .bg-semantic-w-400 {
   background-color: hsl(48, 96%, 50%);
+  border-left: 8px solid hsl(39, 92%, 38%);
 }
+
+.bg-semantic-pw-w-400 {
+  background-color: hsl(48, 96%, 50%);
+}
+
 .Toastify {
   position: fixed;
   top: 50%;

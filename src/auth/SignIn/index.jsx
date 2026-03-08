@@ -13,15 +13,16 @@ import useLocalStorage from '../../assets/hooks/useLocalStorage';
 import useCookie from '../../assets/hooks/useCookie.jsx';
 import Cookies from 'js-cookie';
 
+import useNotification from '../../assets/hooks/useNotification.jsx';
+
 
 export default function SignIn() {
    const [state, dispatch] = useReducer(signInReducer, initialState);
    const [isShowing, setIsShowing] = useState(false);
    const navigate = useNavigate();
+   const {updateNotification} = useNotification();
    const userDataArr = [];
    const [data, setData] = useLocalStorage('e_Mart', []);
-
-
 
    const togglePasswordIsShowing = () => {
       setIsShowing(!isShowing);
@@ -36,8 +37,7 @@ export default function SignIn() {
 
       try {
          if (!isValid) {
-            toast.error(error);
-            return;
+            return updateNotification("error", error);
          }
          const userData = {
             _id: uuid(),
@@ -45,7 +45,7 @@ export default function SignIn() {
          }
          userDataArr.push(userData);
 
-         toast.success('User successfully signed in!');
+         updateNotification('success', 'User successfully signed in!');
          setData(userDataArr);
          Cookies.set('e_Mart', `user: ${userData._id}, ${userData.email}`);
 
