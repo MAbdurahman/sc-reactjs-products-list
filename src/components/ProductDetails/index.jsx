@@ -80,7 +80,7 @@ export default function ProductDetails() {
                   <div className={styles.product_details_right_bottom}>
                      <div className={styles.product_details_buttons}>
                         {
-                           isInCart(singleProduct) && (
+                           isInCart(singleProduct) && getProductInCart(id) && (
                               <div className={styles.product_details__right_bottom_left}>
                                  <Minus className={styles.product_details_icon} onClick={()=>handleDecreaseQuantity(singleProduct)} />
                                  <span className={styles.product_details_quantity}>{getProductInCart(id).quantity}</span>
