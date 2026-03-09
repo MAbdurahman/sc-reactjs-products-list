@@ -1,7 +1,6 @@
 import MetaData from '../../layouts/MetaData/index.jsx';
 import styles from './Cart.module.css';
 import useCart from '../../assets/hooks/useCart.jsx';
-import {CART_ACTIONS} from './cartReducer.js';
 import EmptyCart from '../../errors/EmptyCart/index.jsx';
 import CartItem from '../CartItem/index.jsx';
 import CartSummary from '../CartSummary/index.jsx';

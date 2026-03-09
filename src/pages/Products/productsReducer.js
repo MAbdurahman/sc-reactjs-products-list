@@ -16,9 +16,8 @@ export const productsReducer = (state = productsInitialState, action) => {
    switch (type) {
       case PRODUCT_ACTIONS.GET_PRODUCTS:
          return {...state, products: payload};
-      case PRODUCT_ACTIONS.GET_SINGLE_PRODUCT: {
-         console.log('payload - ',payload);
 
+      case PRODUCT_ACTIONS.GET_SINGLE_PRODUCT: {
          return {
             ...state,
             singleProduct: state.products.find(product => product.id === parseInt(payload))

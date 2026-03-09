@@ -262,7 +262,7 @@ function makeString(object) {
  */
 export function capitalizeFirst(str, lowercaseRest) {
    str = makeString(str);
-   var remainingChars = !lowercaseRest
+   const remainingChars = !lowercaseRest
       ? str.slice(1)
       : str.slice(1).toLowerCase();
 

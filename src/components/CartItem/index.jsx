@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import useCart from '../../assets/hooks/useCart.jsx';
 import styles from './CartItem.module.css';
 import {Minus, Plus, Trash2} from 'react-feather';
