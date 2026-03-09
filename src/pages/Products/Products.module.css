@@ -19,6 +19,18 @@
       top: 68rem;
    }
 }
+@media screen and (max-width: 840px) {
+   .products__page {
+      top: 110rem;
+      padding-left: 1.5rem;
+   }
+}
+@media screen and (max-width: 770px) {
+   .products__page {
+      top: 115rem;
+
+   }
+}
 
 .products__page__title {
    font-weight: var(--font-weight-semibold);
