@@ -14,11 +14,16 @@
       top: 55rem;
    }
 }
+@media screen and (max-width: 1100px) {
+   .products__page {
+      top: 68rem;
+   }
+}
 
 .products__page__title {
    font-weight: var(--font-weight-semibold);
    color: var(--color-neutral-900);
-   margin-bottom: 1.5em;
+   margin-bottom: 1em;
 }
 
 .products__grid {
