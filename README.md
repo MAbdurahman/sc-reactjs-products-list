@@ -16,6 +16,7 @@ product details page.</p>
 - React router dom
 - React helmet
 - React hooks
+- custom notification
 
 ### To install dependencies
 ```shell
