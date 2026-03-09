@@ -345,14 +345,14 @@ a:hover {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .utils-container {
-    max-width: 1144px;
+    max-width: 1236px;
   }
-}
-@media (min-width: 1400px) {
+}*/
+@media (min-width: 1360px) {
   .utils-container {
-    max-width: 1320px;
+    max-width: 1240px;
   }
 }
 

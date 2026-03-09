@@ -344,12 +344,12 @@ export const GlobalStyles = createGlobalStyle`
          max-width: 960px;
       }
    }
-   @media (min-width: 1200px) {
+   /*@media (min-width: 1200px) {
       .utils-container {
          max-width: 1144px;
       }
-   }
-   @media (min-width: 1400px) {
+   }*/
+   @media (min-width: 1360px) {
       .utils-container {
          max-width: 1320px;
       }

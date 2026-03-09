@@ -11,3 +11,9 @@
    font-size: 6rem;
    color: var(--color-neutral-900);
 }
+
+.contact__page__message {
+   font-size: 1rem;
+   font-weight: var(--font-weight-semibold);
+   color: var(--color-bright-blue-01-600);
+}

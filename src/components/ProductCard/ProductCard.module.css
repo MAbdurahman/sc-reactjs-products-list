@@ -3,7 +3,8 @@
    position: relative;
    display: flex;
    flex-direction: column;
-   width: 304px;
+   /*width: 304px;*/
+   max-width: 304px;
    height: auto;
    font-size: 0.75rem;
    font-weight: 500;

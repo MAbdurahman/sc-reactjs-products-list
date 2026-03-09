@@ -18,15 +18,12 @@ export default function ProductDetails() {
    const {productsState, productsDispatch} = useProducts();
    const {cartState, cartDispatch, isInCart, getProductInCart} = useCart();
    const {cartItems} = cartState;
-   console.log(productsState)
-   let productPrice;
+   console.log(productsState);
 
    console.log('params id - ', id );
    console.log('cartItems', cartItems)
 
    console.log('cartState', cartState);
-
-
 
    useEffect(() => {
       productsDispatch({
@@ -51,12 +48,9 @@ export default function ProductDetails() {
    }
 
 
-   /*let productPrice = singleProduct.price;
-   productPrice = formatWithDecimals(productPrice);
-   productPrice = addCommasToNumber(productPrice);*/
 
-   console.log('isInCart', isInCart(singleProduct));
-   console.log('getProductInCart', getProductInCart(id));
+   /*console.log('isInCart', isInCart(singleProduct));
+   console.log('getProductInCart', getProductInCart(id));*/
 
    return (
       singleProduct && (
