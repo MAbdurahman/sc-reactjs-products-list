@@ -7,11 +7,6 @@ import StarRating from '../StarRating/index.jsx';
 import React, {useEffect} from 'react';
 import {CART_ACTIONS} from '../Cart/cartReducer.js';
 import {PRODUCT_ACTIONS} from '../../pages/Products/productsReducer.js';
-import {
-   addCommasToNumber,
-   formatWithDecimals
-} from '../../assets/utils/functionsUtils.js';
-
 
 export default function ProductDetails() {
    const {id} = useParams();
@@ -20,7 +15,7 @@ export default function ProductDetails() {
    const {cartItems} = cartState;
    console.log(productsState);
 
-   console.log('params id - ', id );
+   console.log('params id - ', id);
    console.log('cartItems', cartItems)
 
    console.log('cartState', cartState);
@@ -47,47 +42,53 @@ export default function ProductDetails() {
       cartDispatch({type: CART_ACTIONS.ADD_TO_CART, payload: singleProduct});
    }
 
-
-
-   /*console.log('isInCart', isInCart(singleProduct));
-   console.log('getProductInCart', getProductInCart(id));*/
-
    return (
       singleProduct && (
          <section className={styles.product_details_container}>
             <div className={styles.product_details_row}>
                <div className={styles.product_details_col_6}>
                   <figure className={styles.product_details_image}>
-                     <img src={singleProduct.image} alt={singleProduct.name} />
+                     <img src={singleProduct.image} alt={singleProduct.name}/>
                   </figure>
                </div>
-               <div className={styles.product_details_col_6} >
-                  <div className={styles.product_details_right_top}>
-                  <h3 className={styles.product_details_name}>{singleProduct.name}</h3>
-                  <div className={styles.product_details_rating}>
-                  <StarRating />
-                     <span className={styles.product_details_rating}>({singleProduct.reviews} reviews)</span>
-                  </div>
-                  <p className={styles.product_details_description}>{singleProduct.description}</p>
-                  <h4 className={styles.product_details_price}>${singleProduct.price.toLocaleString()}</h4>
-                  </div>
-                  <div className={styles.product_details_right_bottom}>
-                     <div className={styles.product_details_buttons}>
-                        {
-                           isInCart(singleProduct) && getProductInCart(id) && (
-                              <div className={styles.product_details__right_bottom_left}>
-                                 <Minus className={styles.product_details_icon} onClick={()=>handleDecreaseQuantity(singleProduct)} />
-                                 <span className={styles.product_details_quantity}>{getProductInCart(id).quantity}</span>
-                                 <Plus className={styles.product_details_icon} onClick={()=> handleIncreaseQuantity(singleProduct)} />
-                              </div>
-                           )
-                        }
-                        <button type='button' className={styles.product_details_button} onClick={handleAddToCart} >Add to Cart</button>
+               <div className={styles.product_details_col_6}>
+                  <div className={styles.product_details_right}>
+                     <div className={styles.product_details_right_top}>
+                        <h3
+                           className={styles.product_details_name}>{singleProduct.name}</h3>
+                        <div className={styles.product_details_rating}>
+                           <StarRating/>
+                           <span
+                              className={styles.product_details_rating}>({singleProduct.reviews} reviews)</span>
+                        </div>
+                        <p className={styles.product_details_description}>{singleProduct.description}</p>
+                        <h4
+                           className={styles.product_details_price}>${singleProduct.price.toLocaleString()}</h4>
+                     </div>
+                     <div className={styles.product_details_right_bottom}>
+                        <div className={styles.product_details_buttons}>
+                           {
+                              isInCart(singleProduct) && getProductInCart(id) && (
+                                 <div
+                                    className={styles.product_details__right_bottom_left}>
+                                    <Minus className={styles.product_details_icon}
+                                           onClick={() => handleDecreaseQuantity(singleProduct)}/>
+                                    <span
+                                       className={styles.product_details_quantity}>{getProductInCart(id).quantity}</span>
+                                    <Plus className={styles.product_details_icon}
+                                          onClick={() => handleIncreaseQuantity(singleProduct)}/>
+                                 </div>
+                              )
+                           }
+                           <button type='button'
+                                   className={styles.product_details_button}
+                                   onClick={handleAddToCart}>Add to Cart
+                           </button>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-
          </section>
       )
       /*<section className={styles.product_details_container}>
