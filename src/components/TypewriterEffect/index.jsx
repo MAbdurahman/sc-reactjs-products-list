@@ -6,17 +6,17 @@ export default function TypewriterEffect() {
       <TypeAnimation
          sequence={[
             // Same substring at the start will only be typed out once, initially
-            'Welcome to e-Mart, Mahdi Abdurrahman',
+            'Welcome',
             1000, // wait 1s before replacing "Mice" with "Hamsters"
-            'Welcome to e-Mart, Khalil Abdurrahman',
+            'Welcome to',
             1000,
-            'Welcome to e-Mart, Alexander Abdurrahman',
+            'Welcome to e-Mart!',
             1000,
          ]}
          wrapper="h4"
          speed={50}
          style={{ fontSize: '2em', fontWeight: 'bolder', display: 'inline-block' }}
-         repeat={1}
+         repeat={0}
       />
    );
 }
