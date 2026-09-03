@@ -46,6 +46,6 @@ or
 yarn build
 ```
 
-[Live Demo](https://sc-reactjs-products-list.vercel.app/)
+[Live Demo](https://sc-reactjs-products-list.netlify.app/)
 
 ![Image](https://github.com/user-attachments/assets/256416b2-7d22-4ae0-b43c-6bcd90198cf3)
